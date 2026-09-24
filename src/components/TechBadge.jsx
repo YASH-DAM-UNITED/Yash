@@ -1,0 +1,2 @@
+export default function TechBadge({item,className=""}){return <div className={`techBadge ${item[2]} ${className}`}>
+<div className="techIcon">{item[0]}</div><div><b>{item[1]}</b><small>TECHNOLOGY</small></div></div>}

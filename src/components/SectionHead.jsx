@@ -1,0 +1,1 @@
+export default function SectionHead({n,label}){return <div className="sectionHead"><b>{n}</b><i/><span>{label}</span></div>}

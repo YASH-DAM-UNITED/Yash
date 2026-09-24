@@ -1,25 +1,39 @@
-# Yashwanth V4 Portfolio
+# Yashwanth.L — V5 Code-Only Portfolio
 
-This version fixes the V3 hero implementation:
-- Hero uses a dedicated cropped cinematic asset only.
-- No full-page website mockup is used as a background.
-- No ghosted About/Skills/Projects sections behind the hero.
-- Detailed cybernetic head from the approved visual direction.
-- Clean Yashwanth-first hero.
-- Mouse parallax.
-- Scroll reveal/depth animation.
-- Skills universe.
-- 3D project carousel.
-- Experience timeline.
-- Interactive terminal.
-- Responsive mobile layout.
-- URL hash is cleaned on initial load.
+This rebuild intentionally uses NO generated website screenshot and NO background photo.
+
+Everything visible is created as real React/CSS:
+- Cybernetic head built with CSS layers
+- Mountains, sun, stars, grid and atmosphere built with CSS
+- Individual technology badges with recognizable brand colors
+- Burgundy/black premium design system
+- Mouse parallax and cursor lighting
+- Scroll reveal/depth transitions
+- Skills universe
+- 3D project carousel
+- Animated project mini-visualizations
+- Experience timeline
+- Typing terminal
+- Contact YL identity animation
+- Responsive mobile behavior
+- Reduced-motion fallback
 
 ## Direct GitHub upload
-Extract this ZIP and upload ALL files/folders inside directly to your repository root.
+1. Extract the ZIP.
+2. Open the extracted folder.
+3. Upload ALL contents directly to the root of your GitHub repository.
+4. Replace the old V4 files.
+
+Repository root:
+src/
+index.html
+package.json
+vite.config.js
+README.md
 
 ## Cloudflare Pages
-Framework: Vite
+Framework preset: Vite
 Build command: npm run build
-Output directory: dist
-No wrangler.toml required for static Pages deployment.
+Build output directory: dist
+
+No wrangler.toml is needed for this static Pages project.

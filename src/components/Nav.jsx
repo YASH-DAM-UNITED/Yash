@@ -1,1 +1,6 @@
-import{sections}from"../data/portfolio";export default function Nav(){return <><nav className="top shell"><a href="#home" className="brand">YASHWANTH.L</a><div>{sections.slice(0,4).map(x=><a key={x} href={"#"+x.toLowerCase()}>{x[0]+x.slice(1).toLowerCase()}</a>)}</div><a className="pill" href="#contact">Let's Connect →</a></nav><aside className="rail">{sections.map((x,i)=><a href={"#"+x.toLowerCase()} key={x}><b>{String(i+1).padStart(2,"0")}</b><span>{x}</span></a>)}</aside></>}
+import {useState} from "react";
+export default function Nav(){const[open,setOpen]=useState(false);const links=["About","Skills","Projects","Experience","Terminal","Contact"];
+return <><nav className="nav shell"><a className="brand" href="#home">YASHWANTH<span>.L</span></a>
+<div className={`navLinks ${open?"open":""}`}>{links.map(x=><a onClick={()=>setOpen(false)} href={"#"+x.toLowerCase()} key={x}>{x}</a>)}</div>
+<a className="navCta" href="#contact">Let's Connect <i>→</i></a><button className="menu" onClick={()=>setOpen(!open)}>☰</button></nav>
+<div className="progressRail">{links.map((x,i)=><a href={"#"+x.toLowerCase()} key={x}><i>{String(i+1).padStart(2,"0")}</i><span>{x}</span></a>)}</div></>}
