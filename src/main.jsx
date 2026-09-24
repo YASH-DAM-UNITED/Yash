@@ -1,32 +1,5 @@
-import React,{useEffect,useRef} from 'react';
-import {createRoot} from 'react-dom/client';
-import {Github,Linkedin,Mail,ArrowUpRight,Database,Code2,Workflow,BarChart3,MapPin,GraduationCap} from 'lucide-react';
-import gsap from 'gsap';import {ScrollTrigger} from 'gsap/ScrollTrigger';import './styles.css';import portrait from './assets/yashwanth.png';
-gsap.registerPlugin(ScrollTrigger);
-const projects=[
- {n:'01',tag:'DATA SYSTEMS',title:'Multi-Location Inventory Data System',text:'Centralized operational inventory data into a structured workflow with validation, historical records, duplicate protection and reliable multi-location submissions.',chips:['Data Validation','Inventory Data','Workflow Design']},
- {n:'02',tag:'ANALYTICS',title:'Workforce Data Analytics Engine',text:'Automated schedule processing, shift classification, overtime calculations and branch-level workforce reporting from complex weekly datasets.',chips:['Python','Data Processing','Reporting']},
- {n:'03',tag:'AUTOMATION',title:'Data Automation Toolkit',text:'Reusable automation for spreadsheet restructuring, extraction, validation, high-volume file processing and repeatable report generation.',chips:['Automation','Google Sheets','Excel']},
- {n:'04',tag:'SOFTWARE',title:'Cloud Data Operations Platform',text:'Built a modern web architecture connecting React interfaces, REST endpoints, serverless workers and structured data sources for scalable operational workflows.',chips:['React','REST API','Cloudflare Workers']}
-];
-function App(){const root=useRef();useEffect(()=>{let ctx=gsap.context(()=>{
- gsap.to('.orb',{yPercent:35,scale:1.35,scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:1}});
- gsap.to('.hero-name',{y:-120,opacity:.08,scale:1.08,scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom 30%',scrub:1}});
- gsap.to('.portrait',{y:-30,scale:1.06,scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:1}});
- gsap.utils.toArray('.reveal').forEach(el=>gsap.from(el,{y:55,opacity:0,duration:1,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 86%'}}));
- gsap.utils.toArray('.project').forEach((el,i)=>gsap.from(el,{x:i%2?55:-55,opacity:0,duration:1,scrollTrigger:{trigger:el,start:'top 88%'}}));
- },root);return()=>ctx.revert()},[]);
- return <main ref={root}>
- <div className="grain"/><nav><a className="mark" href="#top">YL<span>.</span></a><div className="navlinks"><a href="#profile">Profile</a><a href="#work">Work</a><a href="#contact">Contact</a></div></nav>
- <section className="hero" id="top"><div className="orb"/><div className="hero-copy"><p className="eyebrow">DATA • SYSTEMS • AUTOMATION</p><h1 className="hero-name">YASHWANTH<span>.L</span></h1><div className="role"><strong>DATA PROGRAMMER</strong><span>&</span><strong>DATA MANAGEMENT</strong></div><p className="intro">I turn raw operational data into structured, automated systems that people can actually use.</p></div><div className="portrait-wrap"><div className="halo"/><img className="portrait" src={portrait} alt="Yashwanth.L"/></div><div className="scroll">SCROLL TO EXPLORE <i/></div></section>
- <section className="manifesto"><p className="kicker reveal">WHAT I DO</p><h2 className="reveal">I MAKE <em>DATA</em><br/>WORK HARDER.</h2><p className="manifesto-copy reveal">From messy spreadsheets and operational records to automated pipelines, analytics and web systems — I design the structure between information and action.</p></section>
- <section className="profile" id="profile"><div className="section-head reveal"><span>01 / PROFILE</span><h2>BUILT AROUND<br/><i>PROBLEM SOLVING.</i></h2></div><div className="profile-grid reveal"><div><p className="lead">Data Programmer focused on data management, automation and software systems.</p><p>Based in Jeddah, Saudi Arabia, I work with operational data and build tools that transform repetitive, fragmented processes into structured digital workflows. My background combines an MCA with hands-on experience across data operations, technical support, automation and application development.</p></div><div className="facts"><div><MapPin/><span>Jeddah, Saudi Arabia</span></div><div><GraduationCap/><span>Master of Computer Applications</span></div><div><Database/><span>Data Programming & Management</span></div></div></div></section>
- <section className="capabilities"><div className="section-head reveal"><span>02 / CAPABILITIES</span><h2>DATA IS THE CORE.<br/><i>ENGINEERING IS THE LEVER.</i></h2></div><div className="cap-grid">
- {[[Database,'Data Programming','Processing • transformation • validation • extraction'],[BarChart3,'Data Management','Operational datasets • quality • reporting • standardization'],[Workflow,'Automation & Analytics','Workflow automation • KPI systems • analysis • reporting'],[Code2,'Software Systems','React • JavaScript • APIs • serverless applications']].map(([I,t,d],i)=><article className="cap reveal" key={t}><span>0{i+1}</span><I/><h3>{t}</h3><p>{d}</p></article>)}
- </div></section>
- <section className="work" id="work"><div className="section-head reveal"><span>03 / SELECTED SYSTEMS</span><h2>FROM PROBLEM<br/>TO <i>WORKING SYSTEM.</i></h2></div><div className="projects">{projects.map(p=><article className="project" key={p.n}><div className="project-no">{p.n}</div><div><small>{p.tag}</small><h3>{p.title}</h3><p>{p.text}</p><div className="chips">{p.chips.map(c=><span key={c}>{c}</span>)}</div></div><ArrowUpRight/></article>)}</div></section>
- <section className="stack"><p className="kicker reveal">TECHNOLOGY</p><div className="marquee reveal"><span>PYTHON</span><i>•</i><span>REACT</span><i>•</i><span>JAVASCRIPT</span><i>•</i><span>GOOGLE SHEETS</span><i>•</i><span>EXCEL</span><i>•</i><span>REST APIs</span><i>•</i><span>CLOUDFLARE</span></div></section>
- <section className="contact" id="contact"><div className="contact-glow"/><p className="kicker reveal">LET'S CONNECT</p><h2 className="reveal">LET'S MAKE<br/><em>DATA WORK.</em></h2><p className="reveal">Open to conversations around data programming, data management, automation and software systems.</p><div className="contact-links reveal"><a href="mailto:yash2002anitha@gmail.com"><Mail/>Email <ArrowUpRight/></a><a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/yashwanth-yash-847a14185/"><Linkedin/>LinkedIn <ArrowUpRight/></a><a target="_blank" rel="noreferrer" href="https://github.com/YASH-DAM-UNITED"><Github/>GitHub <ArrowUpRight/></a></div></section>
- <footer><span>© 2026 YASHWANTH.L</span><span>DATA PROGRAMMER • DATA MANAGEMENT</span></footer>
- </main>}
-createRoot(document.getElementById('root')).render(<App/>);
+import React from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App";
+import "./styles.css";
+createRoot(document.getElementById("root")).render(<React.StrictMode><App /></React.StrictMode>);
