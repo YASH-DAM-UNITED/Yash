@@ -1,19 +1,29 @@
-# Yashwanth.L Portfolio — GitHub → Cloudflare no-settings fix
+# Yashwanth.L — 3D Portfolio
 
-This package is designed for the exact CI flow shown in the Cloudflare logs:
+A React/Vite cinematic portfolio using React Three Fiber, Three.js, Framer Motion and GSAP-ready architecture.
 
-1. Cloudflare installs packages.
-2. package.json `postinstall` automatically runs `vite build`.
-3. Vite creates `dist/`.
-4. Cloudflare's existing/default `npx wrangler deploy` runs.
-5. Wrangler uploads `dist/`.
+## Important character note
+The included opening avatar is a procedural 3D placeholder with spectacles. It is NOT claimed to be Yashwanth's likeness.
+To create a character that actually resembles Yashwanth, replace it with a rigged GLB/GLTF model based on reference photos.
 
-You do NOT need to run a command manually in Cloudflare.
+## GitHub → Cloudflare
+This package includes a `postinstall` build because the connected Cloudflare deployment flow previously jumped directly to `npx wrangler deploy`.
+During package installation, `vite build` creates `dist/`; Wrangler then deploys that directory.
 
-IMPORTANT WHEN REPLACING THE GITHUB REPOSITORY:
-- Delete the old repository files first, especially old wrangler/vite/package files.
-- Upload every file from this ZIP to the repository root.
-- Commit the change.
-- Let the existing GitHub-connected Cloudflare build run.
+Repository root:
+- package.json
+- vite.config.js
+- wrangler.jsonc
+- index.html
+- src/
+- public/
 
-Do not upload a prebuilt dist folder; CI creates it automatically.
+## Local
+npm install
+npm run dev
+
+## Contact placeholders
+Replace in `src/main.jsx`:
+- YOUR_EMAIL_HERE
+- YOUR_LINKEDIN_URL
+- YOUR_GITHUB_URL

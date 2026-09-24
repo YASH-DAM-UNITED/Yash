@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "yashwanth-l-portfolio",
+  "name": "yashwanth-3d-portfolio",
   "compatibility_date": "2026-09-24",
   "assets": {
     "directory": "./dist",
