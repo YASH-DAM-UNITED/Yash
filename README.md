@@ -1,16 +1,19 @@
-# GitHub → Cloudflare version
+# Yashwanth.L Portfolio — GitHub → Cloudflare no-settings fix
 
-This version intentionally contains NO wrangler config file.
-With a GitHub-connected Cloudflare Workers Builds project using the default
-`npx wrangler deploy`, current Wrangler can detect Vite and create the required
-Cloudflare configuration automatically.
+This package is designed for the exact CI flow shown in the Cloudflare logs:
 
-Replace the OLD repository contents with this package, especially deleting any
-old wrangler.jsonc / wrangler.toml / Cloudflare-specific vite config, then commit.
+1. Cloudflare installs packages.
+2. package.json `postinstall` automatically runs `vite build`.
+3. Vite creates `dist/`.
+4. Cloudflare's existing/default `npx wrangler deploy` runs.
+5. Wrangler uploads `dist/`.
 
-If Cloudflare opens an automatic configuration PR, merge that PR.
+You do NOT need to run a command manually in Cloudflare.
 
-Before publishing, replace in src/main.jsx:
-YOUR_EMAIL_HERE
-YOUR_LINKEDIN_URL
-YOUR_GITHUB_URL
+IMPORTANT WHEN REPLACING THE GITHUB REPOSITORY:
+- Delete the old repository files first, especially old wrangler/vite/package files.
+- Upload every file from this ZIP to the repository root.
+- Commit the change.
+- Let the existing GitHub-connected Cloudflare build run.
+
+Do not upload a prebuilt dist folder; CI creates it automatically.
