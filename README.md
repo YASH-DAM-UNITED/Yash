@@ -1,20 +1,19 @@
-# Yashwanth.L Portfolio
+# Yashwanth.L Portfolio V2
 
-A static portfolio designed for direct deployment to Cloudflare Pages.
+Cloudflare-ready static portfolio.
 
-## Before launch
-1. Open `index.html`.
-2. Replace `YOUR_EMAIL_HERE` with your real email.
-3. Add your LinkedIn/GitHub URLs if you want buttons for them.
-4. Review wording and project details.
+## V2 additions
+- Dark and light mode with saved preference
+- Horizontal project/capability carousel
+- Scroll reveal animation
+- Animated terminal, scanner, charts, particles and kinetic typography
+- Interactive hover states and cursor glow
+- Responsive mobile design
+- No framework or build step required
+
+## Before deployment
+Open `index.html` and replace `YOUR_EMAIL_HERE` with your preferred public contact email.
 
 ## Cloudflare Pages
-Upload this folder as a static site, or push it to a GitHub repository and connect the repository to Cloudflare Pages.
-
-No build command is required.
-Output directory: `/` (root)
-
-Files:
-- index.html
-- style.css
-- script.js
+Direct Upload: upload the contents of this folder.
+Git integration: no build command is needed; output is the repository root.
