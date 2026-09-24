@@ -1,10 +1,1 @@
-import { experience } from "../data/portfolio";
-export default function Experience(){
- return <section id="experience" className="section experience"><div className="shell">
-  <div className="section-kicker">04 / EXPERIENCE</div><h2>FROM SUPPORT TO <span>SYSTEMS.</span></h2>
-  <div className="timeline">{experience.map((e,i)=><article key={e.role}>
-   <div className="line"><span>{i+1}</span></div><div className="period">{e.period}</div>
-   <div><h3>{e.role}</h3><h4>{e.company}</h4><p>{e.text}</p></div>
-  </article>)}</div>
- </div></section>
-}
+import{experience}from"../data/portfolio";export default function Experience(){return <section id="experience" className="section experience"><div className="shell reveal"><div className="num">04</div><div className="kicker">EXPERIENCE</div><h2>My Professional <span>Journey</span></h2><div className="timeline">{experience.map((e,i)=><article key={e[1]}><div className="node">{i+1}</div><div><small>{e[0]}</small><h3>{e[1]}</h3><b>{e[2]}</b><p>{e[3]}</p></div></article>)}</div></div></section>}

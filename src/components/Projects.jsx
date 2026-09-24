@@ -1,12 +1,1 @@
-import { ArrowUpRight } from "lucide-react";
-import { projects } from "../data/portfolio";
-export default function Projects(){
- return <section id="projects" className="section shell">
-  <div className="section-head"><div><div className="section-kicker">03 / SELECTED WORK</div><h2>PROJECTS WITH <span>IMPACT.</span></h2></div><p>Systems, automation and data workflows designed to solve practical operational problems.</p></div>
-  <div className="project-grid">{projects.map((p,i)=><article className="project-card" key={p.title}>
-    <div className="project-num">0{i+1}</div><div className="tag">{p.tag}</div><h3>{p.title}</h3><p>{p.text}</p>
-    <div className="tech">{p.tech.map(t=><span key={t}>{t}</span>)}</div>
-    <a href={p.link} target="_blank" rel="noreferrer">VIEW GITHUB <ArrowUpRight size={17}/></a>
-  </article>)}</div>
- </section>
-}
+import{useState}from"react";import{ChevronLeft,ChevronRight,ArrowUpRight}from"lucide-react";import{projects}from"../data/portfolio";export default function Projects(){const[i,setI]=useState(0);let pos=n=>{let d=(n-i+projects.length)%projects.length;if(d>projects.length/2)d-=projects.length;return d};return <section id="projects" className="section projects"><div className="shell reveal"><div className="num">03</div><div className="kicker">FEATURED PROJECTS</div><h2>Projects That Make an <span>Impact</span></h2><p className="center">A showcase of my work in automation, data management, web applications and operational systems.</p><div className="carousel"><button onClick={()=>setI((i-1+projects.length)%projects.length)}><ChevronLeft/></button><div className="deck">{projects.map((p,n)=>{let d=pos(n);return <article key={p.title} className={"projectCard "+(d===0?"active":"")} style={{"--d":d,opacity:Math.abs(d)>2?0:1,pointerEvents:Math.abs(d)>2?"none":"auto"}} onClick={()=>setI(n)}><div className="screen"><div className="screenGlow"/><span>{String(n+1).padStart(2,"0")}</span></div><small>{p.type}</small><h3>{p.title}</h3><p>{p.desc}</p><div className="chips">{p.tech.map(t=><i key={t}>{t}</i>)}</div>{d===0&&<a href="https://github.com/YASH-DAM-UNITED" target="_blank">View Project <ArrowUpRight/></a>}</article>})}</div><button onClick={()=>setI((i+1)%projects.length)}><ChevronRight/></button></div><div className="dots">{projects.map((_,n)=><i onClick={()=>setI(n)} className={n===i?"on":""} key={n}/>)}</div></div></section>}

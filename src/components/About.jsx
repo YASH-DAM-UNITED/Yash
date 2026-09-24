@@ -1,18 +1,1 @@
-import { Code2, Database, Workflow } from "lucide-react";
-export default function About(){
- return <section id="about" className="section shell">
-  <div className="section-kicker">01 / ABOUT</div>
-  <div className="about-grid">
-   <div><h2>I BUILD SYSTEMS THAT MAKE <span>DATA WORK.</span></h2></div>
-   <div className="about-copy">
-    <p>I'm <b>Yashwanth.L</b>, a Data Programmer focused on data management, automation and practical software systems. My work sits where operations, data and code meet.</p>
-    <p>With an MCA background and experience across technical support, business operations and programming, I approach problems from both the user and engineering sides.</p>
-   </div>
-  </div>
-  <div className="value-grid">
-   <article><Code2/><h3>BUILD</h3><p>Web applications and tools designed around real operational requirements.</p></article>
-   <article><Workflow/><h3>AUTOMATE</h3><p>Remove repetitive manual work with reliable workflows and business logic.</p></article>
-   <article><Database/><h3>STRUCTURE</h3><p>Turn scattered operational information into usable, validated data systems.</p></article>
-  </div>
- </section>
-}
+import{Workflow,Database,PanelsTopLeft,Lightbulb}from"lucide-react";export default function About(){return <section id="about" className="section about"><div className="shell reveal"><div className="num">01</div><div className="kicker">ABOUT ME</div><div className="aboutGrid"><div><h2>Who is<br/><span>YASHWANTH.L</span> ?</h2><p>I'm a Data Programmer and Data Management professional based in Jeddah, Saudi Arabia, with an MCA background. I specialize in building automation systems, data workflows, operational tools and web applications that solve real-world problems and improve efficiency.</p><div className="miniCards"><div><Workflow/><b>Automate</b><small>Processes</small></div><div><Database/><b>Manage</b><small>Data Efficiently</small></div><div><PanelsTopLeft/><b>Build</b><small>Applications</small></div><div><Lightbulb/><b>Solve</b><small>Real Problems</small></div></div></div><div className="crystal"><div className="glass g1"/><div className="glass g2"/><div className="glass g3"/><div className="glassText">Turning<br/>Data into<br/><strong>Real Solutions</strong><small>AUTOMATION<br/>SYSTEMS<br/>APPLICATIONS<br/>EFFICIENCY</small></div></div></div></div></section>}

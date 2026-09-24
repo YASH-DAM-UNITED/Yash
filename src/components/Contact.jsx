@@ -1,14 +1,1 @@
-import { ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
-export default function Contact(){
- return <section id="contact" className="contact shell">
-   <div className="section-kicker">05 / LET'S CONNECT</div>
-   <h2>HAVE A PROBLEM<br/>WORTH <span>BUILDING?</span></h2>
-   <p>I'm interested in data programming, automation, data management and software opportunities where practical engineering can create measurable impact.</p>
-   <a className="mail" href="mailto:yash2002anitha@gmail.com">yash2002anitha@gmail.com <ArrowUpRight/></a>
-   <div className="socials">
-    <a href="https://github.com/YASH-DAM-UNITED" target="_blank" rel="noreferrer"><Github/> GitHub</a>
-    <a href="https://www.linkedin.com/in/yashwanth-yash-847a14185/" target="_blank" rel="noreferrer"><Linkedin/> LinkedIn</a>
-    <a href="mailto:yash2002anitha@gmail.com"><Mail/> Email</a>
-   </div>
- </section>
-}
+import{Mail,Linkedin,Github,ArrowUpRight}from"lucide-react";export default function Contact(){return <section id="contact" className="section contact"><div className="shell reveal"><div className="num">06</div><div className="kicker">GET IN TOUCH</div><h2>Let's Build Something <span>Together</span></h2><p>I'm open to opportunities, collaborations and interesting projects where data, automation and software can create real impact.</p><div className="contactCards"><a href="mailto:yash2002anitha@gmail.com"><Mail/><b>Email</b><small>yash2002anitha@gmail.com</small></a><a target="_blank" href="https://www.linkedin.com/in/yashwanth-yash-847a14185/"><Linkedin/><b>LinkedIn</b><small>Connect on LinkedIn</small></a><a target="_blank" href="https://github.com/YASH-DAM-UNITED"><Github/><b>GitHub</b><small>YASH-DAM-UNITED</small></a></div><a className="message" href="mailto:yash2002anitha@gmail.com">Send Me a Message <ArrowUpRight/></a></div></section>}

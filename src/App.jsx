@@ -1,11 +1,1 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Experience from "./components/Experience";
-import Contact from "./components/Contact";
-export default function App(){
- return <><Navbar/><main><Hero/><About/><Skills/><Projects/><Experience/><Contact/></main>
- <footer className="shell"><b>YASHWANTH.L</b><span>DATA · CODE · AUTOMATION</span><span>© 2026</span></footer></>;
-}
+import{useEffect}from"react";import Navbar from"./components/Navbar";import Hero from"./components/Hero";import About from"./components/About";import Skills from"./components/Skills";import Projects from"./components/Projects";import Experience from"./components/Experience";import Terminal from"./components/Terminal";import Contact from"./components/Contact";export default function App(){useEffect(()=>{const o=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add("show")),{threshold:.12});document.querySelectorAll(".reveal").forEach(x=>o.observe(x));const move=e=>{document.documentElement.style.setProperty("--mx",e.clientX+"px");document.documentElement.style.setProperty("--my",e.clientY+"px")};window.addEventListener("mousemove",move);return()=>window.removeEventListener("mousemove",move)},[]);return <><div className="cursorGlow"/><Navbar/><main><Hero/><About/><Skills/><Projects/><Experience/><Terminal/><Contact/></main><footer className="shell"><b>YASHWANTH.L</b><span>DATA · CODE · AUTOMATION · SYSTEMS</span><span>© 2026</span></footer></>}

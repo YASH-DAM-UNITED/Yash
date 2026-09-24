@@ -1,0 +1,1 @@
+export default function Scene(){return <div className="scene" aria-hidden="true"><div className="stars"/><div className="gridfloor"/><div className="planet"><div className="planetGlow"/></div><div className="moon m1"/><div className="moon m2"/><div className="beam b1"/><div className="beam b2"/></div>}
