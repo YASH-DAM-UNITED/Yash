@@ -21,7 +21,7 @@
     <nav>
       <a href="#about">About</a><a href="#capabilities">Capabilities</a><a href="#work">Systems</a><a href="#stack">Stack</a><a href="#contact">Contact</a>
     </nav>
-    <a class="nav-cta" href="#contact">Let's build <b>↗</b></a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark mode"><span class="sun">☀</span><span class="moon">☾</span></button><a class="nav-cta" href="#contact">Let's build <b>↗</b></a>
   </header>
 
   <main id="top">
@@ -90,6 +90,24 @@
       </div>
     </section>
 
+
+    <section class="section showcase">
+      <div class="section-tag reveal">02.5 / BUILDING EXPERIENCE</div>
+      <div class="section-title reveal"><h2>Scroll less.<br/><span>Explore more.</span></h2><p>A moving view of the systems, thinking and capabilities behind my work.</p></div>
+      <div class="carousel-shell reveal">
+        <button class="carousel-btn prev" aria-label="Previous">←</button>
+        <div class="carousel-track" id="carouselTrack">
+          <article class="slide"><div class="slide-no">01</div><small>AUTOMATION</small><h3>Repetitive → Automatic</h3><p>I look for work people repeat every day and turn the rules behind it into reliable software.</p><div class="visual rings"><i></i><i></i><i></i><b>FLOW</b></div></article>
+          <article class="slide"><div class="slide-no">02</div><small>DATA</small><h3>Raw → Decision-ready</h3><p>Messy spreadsheets, branch files and operational records become structured reporting layers.</p><div class="visual bars"><i></i><i></i><i></i><i></i><i></i></div></article>
+          <article class="slide"><div class="slide-no">03</div><small>SYSTEMS</small><h3>Idea → Interface → API</h3><p>I connect the visible workflow to the logic and data underneath instead of stopping at a mockup.</p><div class="visual nodes"><i></i><i></i><i></i><i></i><b></b></div></article>
+          <article class="slide"><div class="slide-no">04</div><small>INTELLIGENCE</small><h3>Document → Structured Data</h3><p>OCR and vision experiments designed around actual operational documents and extraction rules.</p><div class="visual scanner"><i></i><b>[SKU] PRODUCT</b><b>12 PCS</b></div></article>
+          <article class="slide"><div class="slide-no">05</div><small>ITERATION</small><h3>Edge case → Better product</h3><p>Real usage exposes what diagrams cannot. I use those failures to make the system stronger.</p><div class="visual pulse"><i></i><b>99.9</b><span>IMPROVE / REPEAT</span></div></article>
+        </div>
+        <button class="carousel-btn next" aria-label="Next">→</button>
+      </div>
+      <div class="carousel-dots" id="carouselDots"></div>
+    </section>
+
     <section id="work" class="section work">
       <div class="section-tag reveal">03 / SELECTED SYSTEMS</div>
       <div class="section-title reveal"><h2>Problems I've turned<br/>into <span>systems.</span></h2><p>Real operational challenges, approached as engineering problems.</p></div>
@@ -140,6 +158,12 @@
     <section class="section philosophy">
       <div class="big-quote reveal">“I like problems where the answer isn't another spreadsheet—<span>it's a better system.</span>”</div>
       <div class="principles reveal"><div><b>01</b><span>UNDERSTAND</span><p>Find the actual operational bottleneck.</p></div><div><b>02</b><span>DESIGN</span><p>Make the workflow simpler before coding it.</p></div><div><b>03</b><span>BUILD</span><p>Turn rules and data into a working product.</p></div><div><b>04</b><span>ITERATE</span><p>Improve from real-world usage and edge cases.</p></div></div>
+    </section>
+
+
+    <section class="kinetic">
+      <div class="kinetic-line left">DATA • SYSTEMS • AUTOMATION • INTELLIGENCE • DATA • SYSTEMS • AUTOMATION • INTELLIGENCE •</div>
+      <div class="kinetic-line right">BUILD • TEST • IMPROVE • SHIP • BUILD • TEST • IMPROVE • SHIP • BUILD • TEST •</div>
     </section>
 
     <section id="contact" class="contact">
