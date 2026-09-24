@@ -1,45 +1,32 @@
-# Yashwanth.L — Cinematic Portfolio / YASH//OS
+# Yashwanth.L React Portfolio
 
-This is a static, Cloudflare-ready personal portfolio.
+## Run locally
+```bash
+npm install
+npm run dev
+```
 
-## Included
-- Cinematic YASH//OS boot sequence
-- Dark + light mode with circular wipe transition
-- Animated data-engine simulation
-- Scroll-linked data-flow scene
-- Sticky stacked project storytelling
-- DAM Operations architecture animation
-- Data automation transformation scene
-- OCR scanning scene
-- Before/After workflow visualization
-- Interactive technical constellation
-- Career evolution timeline
-- Command palette (Cmd/Ctrl + K)
-- Mini interactive terminal
-- Recruiter Mode / Experience Mode
-- 60-second auto "Play Experience"
-- Custom cursor, particles, magnetic buttons, glass UI
-- Responsive mobile layout
+## Build
+```bash
+npm run build
+```
+The production files will be in `dist/`.
 
-## Important before launch
-Open `index.html` and replace:
+## Cloudflare Pages
+Connect the GitHub repository or upload the project.
+- Framework preset: Vite
+- Build command: `npm run build`
+- Build output directory: `dist`
+
+## Before launch
+In `src/main.jsx`, replace:
 - `YOUR_EMAIL_HERE`
 - `YOUR_LINKEDIN_URL`
 - `YOUR_GITHUB_URL`
 
-The animated "YASH//ENGINE" is intentionally labeled LIVE SIMULATION. It is a visual demonstration and does not claim to show live company production data.
+## Intro behavior
+There is NO Enter/Start button. The site opens immediately.
+The intro uses a CSS-built stylized character with spectacles. It starts far away, walks/zooms toward the foreground, raises a hand toward the profile panel, and then reveals Yashwanth's profile information.
 
-## Cloudflare Pages
-### Direct upload
-Upload `index.html`, `style.css`, and `script.js`.
-
-### GitHub deployment
-Push the files to a repository and connect it to Cloudflare Pages.
-There is no build command.
-The output directory is the repository root.
-
-## Local preview
-Open `index.html` directly in a browser, or use a simple local static server.
-
-## Notes
-No framework or paid API is required. Google Fonts require an internet connection; the site falls back to system fonts if unavailable.
+## Grade wording
+The intro currently says `Academic profile: A+ presentation` because no verified CGPA/percentage was supplied. Replace this with the actual grade before publishing if you want an academic result displayed as a factual credential.
