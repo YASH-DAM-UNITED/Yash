@@ -1,29 +1,36 @@
-# Yashwanth.L — 3D Portfolio
+# Yashwanth.L — Particle Cinematic Portfolio v2
 
-A React/Vite cinematic portfolio using React Three Fiber, Three.js, Framer Motion and GSAP-ready architecture.
+Browser-native cinematic portfolio inspired by particle-sculpture / digital-human VFX.
 
-## Important character note
-The included opening avatar is a procedural 3D placeholder with spectacles. It is NOT claimed to be Yashwanth's likeness.
-To create a character that actually resembles Yashwanth, replace it with a rigged GLB/GLTF model based on reference photos.
+## Included
+- 11,500-particle procedural human silhouette assembling from space
+- Particle/filament environment and bloom post-processing
+- Cinematic Yashwanth.L hero
+- Systems/project scenes
+- DAM Operations animated architecture
+- Delivery Note Vision scanner scene
+- Technology universe
+- Reconstruction/contact finale
+- Responsive reduced-complexity mobile layout
+- Cloudflare Workers static-assets deployment config
 
-## GitHub → Cloudflare
-This package includes a `postinstall` build because the connected Cloudflare deployment flow previously jumped directly to `npx wrangler deploy`.
-During package installation, `vite build` creates `dist/`; Wrangler then deploys that directory.
+## Character
+The character is intentionally fictional and is NOT a claim to reproduce Yashwanth's real appearance.
 
-Repository root:
-- package.json
-- vite.config.js
-- wrangler.jsonc
-- index.html
-- src/
-- public/
-
-## Local
+## Run
 npm install
 npm run dev
 
-## Contact placeholders
-Replace in `src/main.jsx`:
-- YOUR_EMAIL_HERE
-- YOUR_LINKEDIN_URL
-- YOUR_GITHUB_URL
+## Build
+npm run build
+
+## GitHub → Cloudflare
+`postinstall` runs `vite build`, producing `dist/` before the configured Wrangler deployment.
+
+## Replace placeholders in src/main.jsx
+YOUR_EMAIL_HERE
+YOUR_LINKEDIN_URL
+YOUR_GITHUB_URL
+
+## Note
+This is a live WebGL/browser interpretation of the reference VFX aesthetic, not an offline-rendered film asset.
