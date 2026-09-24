@@ -1,0 +1,1 @@
+export default function DigitalHead(){return <div className="headWrap"><div className="halo h1"/><div className="halo h2"/><div className="digitalHead"><div className="faceCut c1"/><div className="faceCut c2"/><div className="faceCut c3"/><div className="eye"/><div className="yl">YL</div></div><div className="neck"/><div className="scan"/></div>}

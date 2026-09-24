@@ -1,18 +1,30 @@
-# Yashwanth.L Cinematic Portfolio V2
+# Yashwanth.L V3 Cinematic Portfolio
 
-## GitHub direct upload
-Extract this ZIP. Upload the CONTENTS of this folder to the root of your GitHub repository.
+Complete React + Vite portfolio.
 
-The repository root should contain:
-- src/
-- index.html
-- package.json
-- vite.config.js
-- README.md
+## Direct GitHub upload
+1. Extract the ZIP.
+2. Open the extracted folder.
+3. Upload EVERYTHING inside it to the ROOT of your GitHub repository.
+4. Your repository root must show `src`, `public`, `index.html`, `package.json`, and `vite.config.js`.
 
 ## Cloudflare Pages
-Framework preset: Vite
-Build command: npm run build
-Build output: dist
+- Framework preset: Vite
+- Build command: npm run build
+- Build output directory: dist
+- No wrangler.toml is needed for a normal static Pages deployment.
 
-This static Vite portfolio does not require a wrangler.toml file.
+## Visual features
+- Cinematic 3D-style digital head hero
+- Burgundy/black interactive environment
+- First-load boot sequence
+- Mouse parallax/glow
+- Floating technology panels
+- Scroll reveal + blur/depth transitions
+- Skills universe
+- Perspective project carousel
+- Animated experience timeline
+- Interactive developer terminal
+- Contact identity mark
+- Reduced-motion accessibility fallback
+- Mobile responsive layout

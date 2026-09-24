@@ -1,0 +1,1 @@
+import{useEffect,useState}from"react";export default function Loader(){const[hide,setHide]=useState(false);useEffect(()=>{const t=setTimeout(()=>setHide(true),1800);return()=>clearTimeout(t)},[]);return <div className={"loader "+(hide?"gone":"")}><div className="loaderMark">YL</div><div className="loaderLine"><i/></div><p>INITIALIZING // DATA SYSTEMS</p></div>}
