@@ -1,26 +1,16 @@
-# Yashwanth.L React Cinematic Portfolio — Fixed Cloudflare Build
+# GitHub → Cloudflare version
 
-This version fixes the Cloudflare/Vite ESM build error.
+This version intentionally contains NO wrangler config file.
+With a GitHub-connected Cloudflare Workers Builds project using the default
+`npx wrangler deploy`, current Wrangler can detect Vite and create the required
+Cloudflare configuration automatically.
 
-## Important
-If replacing an existing GitHub repository, DELETE any old:
-- vite.config.js / vite.config.ts / vite.config.mjs
-- wrangler.toml / wrangler.json / wrangler.jsonc
-- package-lock.json / bun.lock / bun.lockb
+Replace the OLD repository contents with this package, especially deleting any
+old wrangler.jsonc / wrangler.toml / Cloudflare-specific vite config, then commit.
 
-Then copy ALL files from this folder into the repository root.
+If Cloudflare opens an automatic configuration PR, merge that PR.
 
-## Cloudflare
-Build command: npm run build
-Build output directory: dist
-
-For Workers Builds using a deploy command:
-npx wrangler deploy
-
-The project is explicitly ESM (`"type": "module"`) and does NOT require `@cloudflare/vite-plugin`.
-
-## Before publishing
-Replace the placeholders in `src/main.jsx`:
-- YOUR_EMAIL_HERE
-- YOUR_LINKEDIN_URL
-- YOUR_GITHUB_URL
+Before publishing, replace in src/main.jsx:
+YOUR_EMAIL_HERE
+YOUR_LINKEDIN_URL
+YOUR_GITHUB_URL
