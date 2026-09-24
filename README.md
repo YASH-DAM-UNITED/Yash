@@ -1,30 +1,25 @@
-# Yashwanth.L V3 Cinematic Portfolio
+# Yashwanth V4 Portfolio
 
-Complete React + Vite portfolio.
+This version fixes the V3 hero implementation:
+- Hero uses a dedicated cropped cinematic asset only.
+- No full-page website mockup is used as a background.
+- No ghosted About/Skills/Projects sections behind the hero.
+- Detailed cybernetic head from the approved visual direction.
+- Clean Yashwanth-first hero.
+- Mouse parallax.
+- Scroll reveal/depth animation.
+- Skills universe.
+- 3D project carousel.
+- Experience timeline.
+- Interactive terminal.
+- Responsive mobile layout.
+- URL hash is cleaned on initial load.
 
 ## Direct GitHub upload
-1. Extract the ZIP.
-2. Open the extracted folder.
-3. Upload EVERYTHING inside it to the ROOT of your GitHub repository.
-4. Your repository root must show `src`, `public`, `index.html`, `package.json`, and `vite.config.js`.
+Extract this ZIP and upload ALL files/folders inside directly to your repository root.
 
 ## Cloudflare Pages
-- Framework preset: Vite
-- Build command: npm run build
-- Build output directory: dist
-- No wrangler.toml is needed for a normal static Pages deployment.
-
-## Visual features
-- Cinematic 3D-style digital head hero
-- Burgundy/black interactive environment
-- First-load boot sequence
-- Mouse parallax/glow
-- Floating technology panels
-- Scroll reveal + blur/depth transitions
-- Skills universe
-- Perspective project carousel
-- Animated experience timeline
-- Interactive developer terminal
-- Contact identity mark
-- Reduced-motion accessibility fallback
-- Mobile responsive layout
+Framework: Vite
+Build command: npm run build
+Output directory: dist
+No wrangler.toml required for static Pages deployment.
