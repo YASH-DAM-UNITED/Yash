@@ -1,14 +1,18 @@
-# Yashwanth.L V7
+# Yashwanth.L V8 — Safari Safe
 
-Updates from V6:
-- Front-page YL Data Monolith remains unchanged.
-- About section rewritten and better balanced.
-- "Turning Data Into Real Solutions." is now smaller and placed AFTER the introduction.
-- Tech stack expanded to 16 technologies.
-- Added Python, AI/LLM, Claude, JavaScript, Google Apps Script, React, Cloudflare, Google Sheets, Excel, GitHub, REST APIs, HTML5, CSS3, Vite, OCR/Vision and JSON/Data.
-- Technology cards use individual recognizable accent colors.
-- Skills section redesigned to fit the larger stack cleanly.
+Same V7 portfolio and content, with the front-page Data Monolith animation rebuilt for Safari/WebKit stability.
+
+Fixes:
+- Fixed outer anchor controls layout.
+- Mouse parallax moved to its own wrapper.
+- Floating animation moved to a separate wrapper.
+- The monolith no longer has two systems writing to the same transform.
+- Added WebKit 3D/backface handling.
+- Fixed absolute ring/base/scan coordinates.
+- Touch devices disable cursor parallax.
+- Responsive scaling is isolated from animation transforms.
+- V7 About section and expanded 16-technology stack remain intact.
 
 Cloudflare Pages:
 Build command: npm run build
-Output: dist
+Output directory: dist

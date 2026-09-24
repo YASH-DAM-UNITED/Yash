@@ -52,3 +52,128 @@
 .json .techIcon{color:#111;background:#f1c40f}
 @media(max-width:950px){.techGrid{grid-template-columns:repeat(3,1fr)}.techGalaxy{min-height:650px}}
 @media(max-width:650px){.techGrid{grid-template-columns:repeat(2,1fr);gap:8px}.techGalaxy{padding:25px 15px;min-height:auto}.galaxyCore,.galaxyRing{display:none}.techGrid .techBadge{height:58px}.section .aboutStatement{font-size:26px!important}}
+
+/* =========================================================
+   V8 SAFARI-SAFE HERO 3D PATCH
+   Layout, mouse parallax and floating animation each own
+   separate DOM layers so transforms never overwrite each other.
+   ========================================================= */
+.visualSide{
+  position:relative;
+  contain:layout paint;
+  isolation:isolate;
+  -webkit-transform:translateZ(0);
+  transform:translateZ(0);
+}
+.monolithAnchor{
+  position:relative;
+  width:500px;
+  height:610px;
+  flex:0 0 500px;
+  margin:0 auto;
+  perspective:1200px;
+  -webkit-perspective:1200px;
+  transform:none!important;
+  -webkit-transform:none!important;
+  contain:layout style;
+}
+.monolithParallax{
+  position:absolute;
+  inset:0;
+  width:500px;
+  height:610px;
+  transform:translate3d(calc(var(--px)*-14px),calc(var(--py)*-9px),0) rotateY(calc(var(--px)*5deg));
+  -webkit-transform:translate3d(calc(var(--px)*-14px),calc(var(--py)*-9px),0) rotateY(calc(var(--px)*5deg));
+  transform-origin:50% 50%;
+  -webkit-transform-origin:50% 50%;
+  transform-style:preserve-3d;
+  -webkit-transform-style:preserve-3d;
+  will-change:transform;
+}
+.monolithScene{
+  position:absolute!important;
+  inset:0!important;
+  width:500px!important;
+  height:610px!important;
+  display:block!important;
+  transform:none!important;
+  -webkit-transform:none!important;
+  perspective:none!important;
+  -webkit-perspective:none!important;
+  transform-style:preserve-3d;
+  -webkit-transform-style:preserve-3d;
+}
+.monolithFloat{
+  position:absolute;
+  left:120px;
+  top:84px;
+  width:260px;
+  height:430px;
+  z-index:6;
+  animation:monoFloatSafe 5s ease-in-out infinite;
+  -webkit-animation:monoFloatSafe 5s ease-in-out infinite;
+  will-change:transform;
+  transform:translate3d(0,0,0);
+  -webkit-transform:translate3d(0,0,0);
+}
+.monolith{
+  position:absolute!important;
+  inset:0!important;
+  width:260px!important;
+  height:430px!important;
+  transform:rotateY(-8deg) rotateX(2deg)!important;
+  -webkit-transform:rotateY(-8deg) rotateX(2deg)!important;
+  animation:none!important;
+  -webkit-animation:none!important;
+  transform-style:preserve-3d;
+  -webkit-transform-style:preserve-3d;
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
+}
+@keyframes monoFloatSafe{
+  0%,100%{transform:translate3d(0,0,0)}
+  50%{transform:translate3d(0,-10px,0)}
+}
+@-webkit-keyframes monoFloatSafe{
+  0%,100%{-webkit-transform:translate3d(0,0,0)}
+  50%{-webkit-transform:translate3d(0,-10px,0)}
+}
+.monoAura,.monoOrbit,.monoBase,.monoScan,.orbitTech,.connections,
+.slab,.energyCore,.dataWindow,.monoCode,.energyCut{
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
+}
+.monoAura{left:70px;top:70px}
+.mo1{left:45px!important}.mo2{left:15px!important}.mo3{left:90px!important}
+.monoBase{left:100px!important}
+.monoScan{left:80px!important}
+.connections{position:absolute!important;left:0!important;top:0!important;width:500px!important;height:610px!important}
+.orbitTech{will-change:transform;-webkit-transform:translateZ(0);transform:translateZ(0)}
+/* Safari/WebKit: keep badge float to translation only, never layout coordinates */
+@supports (-webkit-hyphens:none){
+  .monolithParallax{
+    transform:translate3d(calc(var(--px)*-10px),calc(var(--py)*-7px),0);
+    -webkit-transform:translate3d(calc(var(--px)*-10px),calc(var(--py)*-7px),0);
+  }
+  .monoOrbit{will-change:auto}
+}
+/* Touch devices: cursor parallax is unnecessary and can cause viewport jumps */
+@media (hover:none),(pointer:coarse){
+  .monolithParallax{transform:none!important;-webkit-transform:none!important}
+}
+@media(max-width:950px){
+  .monolithAnchor{
+    transform:scale(.8)!important;
+    -webkit-transform:scale(.8)!important;
+    transform-origin:center center;
+    -webkit-transform-origin:center center;
+  }
+  .monolithScene{transform:none!important;-webkit-transform:none!important}
+}
+@media(max-width:560px){
+  .monolithAnchor{
+    transform:scale(.62)!important;
+    -webkit-transform:scale(.62)!important;
+  }
+  .monolithParallax{transform:none!important;-webkit-transform:none!important}
+}
