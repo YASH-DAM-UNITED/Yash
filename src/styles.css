@@ -24,3 +24,31 @@
 .orbitTech{position:absolute;z-index:14;display:flex;align-items:center;gap:7px;border:1px solid #4e2130;background:#0c0508e8;backdrop-filter:blur(10px);padding:7px 10px;border-radius:18px;font-size:7px;box-shadow:0 8px 25px #0008;animation:badgeFloat 4s ease-in-out infinite}.orbitTech b{width:25px;height:25px;border-radius:50%;display:grid;place-items:center;font-size:7px}.orbitTech.python b{background:#306998;color:#ffd343}.orbitTech.react b{background:#10242a;color:#61dafb}.orbitTech.sheets b{background:#0f9d58}.orbitTech.excel b{background:#217346}.orbitTech.cloudflare b{background:#f48120}.orbitTech.js b{background:#f7df1e;color:#111}.ot0{left:0;top:120px}.ot1{right:-5px;top:85px;animation-delay:.5s}.ot2{left:-15px;top:350px;animation-delay:1s}.ot3{right:-10px;top:390px;animation-delay:1.5s}.ot4{right:25px;bottom:55px;animation-delay:2s}.ot5{left:35px;bottom:65px;animation-delay:2.5s}.connections{position:absolute;inset:0;width:100%;height:100%;z-index:3;overflow:visible}.connections path{fill:none;stroke:#ff315f55;stroke-width:1;stroke-dasharray:4 7;animation:dash 8s linear infinite;filter:drop-shadow(0 0 3px #ff315f)}@keyframes dash{to{stroke-dashoffset:-100}}
 @media(max-width:950px){.monolithScene{transform:scale(.8)}}
 @media(max-width:560px){.monolithScene{transform:scale(.62)}}
+
+/* ===== V7 ABOUT + EXPANDED TECH STACK ===== */
+.aboutCopy .aboutIntro{max-width:650px!important;font-size:12px!important;line-height:1.9!important;margin:0 0 14px!important;color:#c0a0aa}
+.aboutCopy .aboutIntro strong{color:#fff;font-weight:700}
+.section .aboutStatement{font-size:clamp(25px,2.5vw,36px)!important;letter-spacing:-1.3px!important;line-height:1.15!important;margin:25px 0 20px!important}
+.aboutStatement em{color:#ff315f!important}
+.skillsIntro{max-width:720px;margin-bottom:38px}
+.skillsIntro h2{font-size:clamp(35px,4vw,55px);margin-bottom:12px}
+.skillsIntro p{font-size:11px;max-width:680px}
+.techGalaxy{position:relative;min-height:520px;border:1px solid #3e1424;border-radius:18px;background:radial-gradient(circle at 50% 50%,#59112833 0,#13060c 25%,#080306 64%);overflow:hidden;padding:45px 34px}
+.galaxyCore{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:115px;height:115px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,#9d1a40,#18070e 68%);border:1px solid #ee3c69;box-shadow:0 0 55px #e2265859;z-index:1}
+.galaxyCore b{font:800 29px Space Grotesk}.galaxyCore small{position:absolute;margin-top:52px;font-size:6px;letter-spacing:2px;color:#cf8297}
+.galaxyRing{position:absolute;left:50%;top:50%;border:1px solid #92204266;border-radius:50%;pointer-events:none}.gr1{width:500px;height:220px;transform:translate(-50%,-50%) rotate(-8deg)}.gr2{width:300px;height:440px;transform:translate(-50%,-50%) rotate(66deg)}
+.techGrid{position:relative;z-index:3;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.techGrid .techBadge{min-width:0;height:66px;transition:.3s;animation:techBreath 5s ease-in-out infinite}
+.techGrid .techBadge:hover{transform:translateY(-6px) scale(1.025);border-color:#c8335c;box-shadow:0 14px 35px #000,0 0 25px #d8275833}
+.techGrid .techBadge:nth-child(2n){animation-delay:.6s}.techGrid .techBadge:nth-child(3n){animation-delay:1.2s}
+@keyframes techBreath{50%{box-shadow:0 12px 30px #0009,0 0 16px #b51a4322}}
+.ai .techIcon{color:#fff;background:linear-gradient(135deg,#7c3aed,#db2777)}
+.claude .techIcon{color:#fff;background:#d97757}
+.appscript .techIcon{color:#fff;background:#4285f4}
+.html .techIcon{color:#fff;background:#e34f26}
+.css .techIcon{color:#fff;background:#1572b6}
+.vite .techIcon{color:#ffd62e;background:#646cff}
+.ocr .techIcon{color:#fff;background:#7c3aed}
+.json .techIcon{color:#111;background:#f1c40f}
+@media(max-width:950px){.techGrid{grid-template-columns:repeat(3,1fr)}.techGalaxy{min-height:650px}}
+@media(max-width:650px){.techGrid{grid-template-columns:repeat(2,1fr);gap:8px}.techGalaxy{padding:25px 15px;min-height:auto}.galaxyCore,.galaxyRing{display:none}.techGrid .techBadge{height:58px}.section .aboutStatement{font-size:26px!important}}

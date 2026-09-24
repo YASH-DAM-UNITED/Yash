@@ -1,28 +1,14 @@
-# Yashwanth.L V6 — Data Monolith Hero
+# Yashwanth.L V7
 
-V6 keeps the rest of the V5 portfolio structure and replaces ONLY the face-based front-page centerpiece.
+Updates from V6:
+- Front-page YL Data Monolith remains unchanged.
+- About section rewritten and better balanced.
+- "Turning Data Into Real Solutions." is now smaller and placed AFTER the introduction.
+- Tech stack expanded to 16 technologies.
+- Added Python, AI/LLM, Claude, JavaScript, Google Apps Script, React, Cloudflare, Google Sheets, Excel, GitHub, REST APIs, HTML5, CSS3, Vite, OCR/Vision and JSON/Data.
+- Technology cards use individual recognizable accent colors.
+- Skills section redesigned to fit the larger stack cleanly.
 
-Front page:
-- No face
-- No generated image
-- No background screenshot
-- CSS/React YL Data Monolith
-- Floating fragmented black/burgundy artifact
-- Internal YL energy core
-- Animated orbit rings
-- Animated scan line
-- Data/code windows
-- Colored Python, React, Google Sheets, Excel, Cloudflare and JavaScript orbit nodes
-- Connection paths
-- Mouse depth/parallax
-- Existing cinematic environment, content, buttons and stats retained
-
-Other sections remain the V5 code-only design.
-
-## GitHub
-Extract and upload all files/folders inside directly to the repository root, replacing V5.
-
-## Cloudflare Pages
-Framework: Vite
+Cloudflare Pages:
 Build command: npm run build
-Output directory: dist
+Output: dist
