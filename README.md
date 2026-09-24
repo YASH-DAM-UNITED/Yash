@@ -1,39 +1,28 @@
-# Yashwanth.L — V5 Code-Only Portfolio
+# Yashwanth.L V6 — Data Monolith Hero
 
-This rebuild intentionally uses NO generated website screenshot and NO background photo.
+V6 keeps the rest of the V5 portfolio structure and replaces ONLY the face-based front-page centerpiece.
 
-Everything visible is created as real React/CSS:
-- Cybernetic head built with CSS layers
-- Mountains, sun, stars, grid and atmosphere built with CSS
-- Individual technology badges with recognizable brand colors
-- Burgundy/black premium design system
-- Mouse parallax and cursor lighting
-- Scroll reveal/depth transitions
-- Skills universe
-- 3D project carousel
-- Animated project mini-visualizations
-- Experience timeline
-- Typing terminal
-- Contact YL identity animation
-- Responsive mobile behavior
-- Reduced-motion fallback
+Front page:
+- No face
+- No generated image
+- No background screenshot
+- CSS/React YL Data Monolith
+- Floating fragmented black/burgundy artifact
+- Internal YL energy core
+- Animated orbit rings
+- Animated scan line
+- Data/code windows
+- Colored Python, React, Google Sheets, Excel, Cloudflare and JavaScript orbit nodes
+- Connection paths
+- Mouse depth/parallax
+- Existing cinematic environment, content, buttons and stats retained
 
-## Direct GitHub upload
-1. Extract the ZIP.
-2. Open the extracted folder.
-3. Upload ALL contents directly to the root of your GitHub repository.
-4. Replace the old V4 files.
+Other sections remain the V5 code-only design.
 
-Repository root:
-src/
-index.html
-package.json
-vite.config.js
-README.md
+## GitHub
+Extract and upload all files/folders inside directly to the repository root, replacing V5.
 
 ## Cloudflare Pages
-Framework preset: Vite
+Framework: Vite
 Build command: npm run build
-Build output directory: dist
-
-No wrangler.toml is needed for this static Pages project.
+Output directory: dist

@@ -1,10 +1,10 @@
 import {Github,Linkedin,MapPin,ArrowRight} from "lucide-react";
-import CyberHead from "./CyberHead";import BackgroundWorld from "./BackgroundWorld";import TechBadge from "./TechBadge";
+import DataMonolith from "./DataMonolith";import BackgroundWorld from "./BackgroundWorld";import TechBadge from "./TechBadge";
 import {tech} from "../data/content";
 export default function Hero(){return <section id="home" className="hero">
 <BackgroundWorld/><div className="heroNoise"/>
 <div className="shell heroLayout">
-<div className="visualSide"><CyberHead/><TechBadge item={tech[0]} className="float f1"/><TechBadge item={tech[3]} className="float f2"/><TechBadge item={tech[1]} className="float f3"/></div>
+<div className="visualSide"><DataMonolith/></div>
 <div className="heroCopy"><div className="availability"><i/> AVAILABLE FOR OPPORTUNITIES</div>
 <div className="eyebrow">DATA · CODE · AUTOMATION · SYSTEMS</div>
 <h1>YASHWANTH<span>.L</span></h1>
