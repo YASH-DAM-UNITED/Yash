@@ -1,32 +1,26 @@
-# Yashwanth.L React Portfolio
+# Yashwanth.L React Cinematic Portfolio — Fixed Cloudflare Build
 
-## Run locally
-```bash
-npm install
-npm run dev
-```
+This version fixes the Cloudflare/Vite ESM build error.
 
-## Build
-```bash
-npm run build
-```
-The production files will be in `dist/`.
+## Important
+If replacing an existing GitHub repository, DELETE any old:
+- vite.config.js / vite.config.ts / vite.config.mjs
+- wrangler.toml / wrangler.json / wrangler.jsonc
+- package-lock.json / bun.lock / bun.lockb
 
-## Cloudflare Pages
-Connect the GitHub repository or upload the project.
-- Framework preset: Vite
-- Build command: `npm run build`
-- Build output directory: `dist`
+Then copy ALL files from this folder into the repository root.
 
-## Before launch
-In `src/main.jsx`, replace:
-- `YOUR_EMAIL_HERE`
-- `YOUR_LINKEDIN_URL`
-- `YOUR_GITHUB_URL`
+## Cloudflare
+Build command: npm run build
+Build output directory: dist
 
-## Intro behavior
-There is NO Enter/Start button. The site opens immediately.
-The intro uses a CSS-built stylized character with spectacles. It starts far away, walks/zooms toward the foreground, raises a hand toward the profile panel, and then reveals Yashwanth's profile information.
+For Workers Builds using a deploy command:
+npx wrangler deploy
 
-## Grade wording
-The intro currently says `Academic profile: A+ presentation` because no verified CGPA/percentage was supplied. Replace this with the actual grade before publishing if you want an academic result displayed as a factual credential.
+The project is explicitly ESM (`"type": "module"`) and does NOT require `@cloudflare/vite-plugin`.
+
+## Before publishing
+Replace the placeholders in `src/main.jsx`:
+- YOUR_EMAIL_HERE
+- YOUR_LINKEDIN_URL
+- YOUR_GITHUB_URL
