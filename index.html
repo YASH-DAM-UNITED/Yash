@@ -1,182 +1,126 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#070b18" />
-  <meta name="description" content="Yashwanth.L — Data Programmer, Automation Developer and Systems Builder in Jeddah, Saudi Arabia." />
-  <title>Yashwanth.L | Data Programmer & Systems Builder</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#050713">
+<meta name="description" content="Yashwanth.L — Data Programmer, Automation Developer and Systems Builder in Jeddah, Saudi Arabia.">
+<title>Yashwanth.L — Data Programmer / Automation / Systems</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="cursor-glow"></div>
-  <div class="noise"></div>
-  <canvas id="particles"></canvas>
+<div id="boot" class="boot">
+  <div class="bootbox"><div class="bootlogo">YL<span>//OS</span></div><p id="bootLine">INITIALIZING YASHWANTH.L</p><div class="bootbar"><i id="bootBar"></i></div><div class="bootchecks"><span>DATA ENGINE</span><b>ONLINE</b><span>AUTOMATION</span><b>ONLINE</b><span>SYSTEM DESIGN</span><b>ONLINE</b><span>VISION LAB</span><b>ONLINE</b></div><button id="enterBtn">ENTER SYSTEM →</button></div>
+</div>
+<div id="themeWipe"></div>
+<div class="cursor"><i></i><span>EXPLORE</span></div>
+<canvas id="space"></canvas>
+<div class="grain"></div>
 
-  <header class="nav">
-    <a class="brand" href="#top"><span>YL</span> YASHWANTH.L</a>
-    <nav>
-      <a href="#about">About</a><a href="#capabilities">Capabilities</a><a href="#work">Systems</a><a href="#stack">Stack</a><a href="#contact">Contact</a>
-    </nav>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark mode"><span class="sun">☀</span><span class="moon">☾</span></button><a class="nav-cta" href="#contact">Let's build <b>↗</b></a>
-  </header>
+<header class="nav glass">
+  <a class="logo" href="#home"><b>YL</b><span>YASHWANTH.L</span></a>
+  <nav><a href="#profile">Profile</a><a href="#systems">Systems</a><a href="#lab">Lab</a><a href="#universe">Stack</a><a href="#journey">Journey</a></nav>
+  <div class="navtools"><button id="recruiterBtn">RECRUITER MODE</button><button id="themeBtn" title="Theme">☾</button><button id="cmdBtn" title="Command palette">⌘K</button></div>
+</header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="orb orb-a"></div><div class="orb orb-b"></div>
-      <div class="hero-grid">
-        <div class="hero-copy reveal">
-          <div class="eyebrow"><i></i> JEDDAH, SAUDI ARABIA <span>•</span> AVAILABLE FOR OPPORTUNITIES</div>
-          <h1>I turn operational<br/>complexity into <span class="gradient">working systems.</span></h1>
-          <p class="lead">Data Programmer & Automation Developer building data workflows, internal platforms, APIs, dashboards and intelligent tools that make operations faster, cleaner and easier to control.</p>
-          <div class="hero-actions">
-            <a class="btn primary" href="#work">Explore my systems <span>→</span></a>
-            <a class="btn ghost" href="#capabilities">What I can build</a>
-          </div>
-          <div class="hero-meta">
-            <div><strong data-count="30">0</strong><span>Branch-scale<br/>workflows</span></div>
-            <div><strong>DATA</strong><span>Programming &<br/>automation</span></div>
-            <div><strong>FULL</strong><span>Problem → working<br/>system</span></div>
-          </div>
-        </div>
+<main>
+<section id="home" class="hero scene">
+  <div class="hero-orbit" aria-hidden="true"><span>PYTHON</span><span>REACT</span><span>APIs</span><span>AUTOMATION</span><span>DATA</span></div>
+  <div class="hero-copy">
+    <div class="status"><i></i> JEDDAH, SAUDI ARABIA <b>•</b> DATA / AUTOMATION / SYSTEMS</div>
+    <h1>I DON'T JUST<br>WORK WITH <em>DATA.</em></h1>
+    <h2>I BUILD <span>SYSTEMS</span> AROUND IT.</h2>
+    <p>I turn operational complexity into data workflows, internal platforms, APIs, automation and decision-ready systems.</p>
+    <div class="hero-actions"><a class="primary magnetic" href="#systems">ENTER MY SYSTEMS <b>↘</b></a><button id="playBtn" class="secondary magnetic">▶ PLAY EXPERIENCE</button></div>
+    <div class="metrics"><div><strong>30+</strong><small>BRANCH-SCALE<br>WORKFLOWS</small></div><div><strong>FULL</strong><small>PROBLEM →<br>WORKING SYSTEM</small></div><div><strong>LIVE</strong><small>BUILD • TEST<br>ITERATE • SHIP</small></div></div>
+  </div>
+  <div class="hero-engine glass">
+    <div class="engine-head"><i></i><i></i><i></i><span>YASH//ENGINE</span><b>LIVE SIMULATION</b></div>
+    <div class="engine-core"><div class="core"><span></span><span></span><span></span><b>YL</b></div></div>
+    <div class="eventlog" id="eventLog"></div>
+    <div class="engine-foot"><span>INPUT</span><i>→</i><span>VALIDATE</span><i>→</i><span>PROCESS</span><i>→</i><span>INSIGHT</span></div>
+  </div>
+  <div class="scrollcue">SCROLL TO CONTROL THE EXPERIENCE <i>↓</i></div>
+</section>
 
-        <div class="command-card reveal delay">
-          <div class="terminal-head"><span></span><span></span><span></span><em>system.profile</em></div>
-          <div class="terminal">
-            <p><b>$</b> whoami</p>
-            <h3>Yashwanth.L</h3>
-            <p class="muted">Data Programmer / Automation Developer</p>
-            <p><b>$</b> capabilities --live</p>
-            <div class="terminal-list">
-              <span><i>01</i> Data automation <b>ONLINE</b></span>
-              <span><i>02</i> Internal web systems <b>ONLINE</b></span>
-              <span><i>03</i> API architecture <b>ONLINE</b></span>
-              <span><i>04</i> Operational analytics <b>ONLINE</b></span>
-              <span><i>05</i> OCR / document intelligence <b>R&D</b></span>
-            </div>
-            <p><b>$</b> status</p>
-            <p class="typing">Building systems that remove repetitive work<span>_</span></p>
-          </div>
-        </div>
-      </div>
-      <div class="scroll-note">SCROLL TO EXPLORE <span>↓</span></div>
-    </section>
+<section id="profile" class="manifesto scene">
+  <div class="chapter">01 <span>PROFILE</span></div>
+  <div class="manifesto-grid"><h2>RAW DATA<br>DOESN'T SOLVE<br>PROBLEMS.<br><em>SYSTEMS DO.</em></h2><div class="copy"><p>I work where <b>data, software and real operations</b> meet. I start with the process: what repeats, what breaks, what wastes time, and what should be controlled.</p><p>Then I engineer around it—automation, interfaces, APIs, validation, reporting and practical tools people can actually use.</p><div class="identity glass"><span>ROLE</span><b>Data Programmer / Automation Developer</b><span>FOCUS</span><b>Operational Systems & Data Workflows</b><span>BASE</span><b>Jeddah, Saudi Arabia</b></div></div></div>
+</section>
 
-    <section id="about" class="section about">
-      <div class="section-tag reveal">01 / PROFILE</div>
-      <div class="about-grid">
-        <h2 class="reveal">Not just analysing data.<br/><span>I build what the data needs.</span></h2>
-        <div class="about-copy reveal">
-          <p>I work where <strong>data, software and real operations</strong> meet. My focus is understanding a messy process, finding what slows people down, and engineering a practical system around it.</p>
-          <p>That can mean automating hundreds of spreadsheet operations, building a staff-facing web workflow, creating APIs between operational data and a frontend, or experimenting with computer vision to turn physical documents into structured data.</p>
-          <div class="location-pill">⌁ Based in Jeddah, KSA <span>Open to ambitious data & technology teams</span></div>
-        </div>
-      </div>
-    </section>
+<section class="pipeline scene">
+  <div class="chapter">02 <span>HOW I THINK</span></div>
+  <div class="sticky-stage">
+    <h2>PROBLEM <i>→</i> DATA <i>→</i> LOGIC <i>→</i> SYSTEM <i>→</i> IMPACT</h2>
+    <svg viewBox="0 0 1200 360" class="flow-svg"><path id="flowPath" d="M80,180 C250,30 330,330 500,180 S780,30 940,180 S1080,260 1140,180"/><circle cx="80" cy="180" r="12"/><circle cx="500" cy="180" r="12"/><circle cx="940" cy="180" r="12"/><circle cx="1140" cy="180" r="12"/></svg>
+    <div class="flow-labels"><span>UNDERSTAND</span><span>STRUCTURE</span><span>AUTOMATE</span><span>DELIVER</span></div>
+  </div>
+</section>
 
-    <section id="capabilities" class="section">
-      <div class="section-tag reveal">02 / WHAT I BUILD</div>
-      <div class="section-title reveal"><h2>From repetitive work<br/>to <span>engineered workflows.</span></h2><p>I don't want technology to sit beside operations. I build it into the operation.</p></div>
-      <div class="cap-grid">
-        <article class="cap reveal"><div class="num">01</div><div class="icon">⌘</div><h3>Automation Systems</h3><p>Turn repetitive operational work into validated, repeatable workflows with Python, Apps Script and purpose-built logic.</p><div class="tags"><span>Python</span><span>Apps Script</span><span>Excel</span></div></article>
-        <article class="cap reveal"><div class="num">02</div><div class="icon">◇</div><h3>Internal Platforms</h3><p>Build responsive tools for staff and management—from input workflows and review screens to operational dashboards.</p><div class="tags"><span>React</span><span>JavaScript</span><span>UX</span></div></article>
-        <article class="cap reveal"><div class="num">03</div><div class="icon">↯</div><h3>APIs & Data Flows</h3><p>Connect interfaces, business logic and data sources with lightweight APIs designed for speed and maintainability.</p><div class="tags"><span>REST</span><span>Workers</span><span>JSON</span></div></article>
-        <article class="cap reveal"><div class="num">04</div><div class="icon">▥</div><h3>Data Engineering</h3><p>Clean, transform, validate and consolidate multi-file operational data into decision-ready outputs and reporting layers.</p><div class="tags"><span>Pandas</span><span>Sheets</span><span>ETL</span></div></article>
-        <article class="cap reveal"><div class="num">05</div><div class="icon">◉</div><h3>Document Intelligence</h3><p>Explore OCR and vision workflows that extract structured SKUs, products, quantities and units from physical documents.</p><div class="tags"><span>OCR</span><span>Vision</span><span>WebGPU</span></div></article>
-        <article class="cap reveal"><div class="num">06</div><div class="icon">⌁</div><h3>Operational Analytics</h3><p>Translate raw branch-level data into stock, workforce, consumption and performance insights people can act on.</p><div class="tags"><span>Analytics</span><span>Dashboards</span><span>KPIs</span></div></article>
-      </div>
-    </section>
+<section id="systems" class="systems scene">
+  <div class="chapter">03 <span>SYSTEMS I'VE BUILT</span></div>
+  <div class="system-intro"><h2>REAL PROBLEMS.<br><em>ENGINEERED WORKFLOWS.</em></h2><p>Scroll through selected systems and the thinking behind them.</p></div>
+  <div class="stackcards">
+    <article class="syscard glass" data-cursor="OPEN">
+      <div class="sysno">PROJECT / 001</div><div class="sysgrid"><div><small>OPERATIONS PLATFORM</small><h3>DAM<br>OPERATIONS</h3><p>Multi-branch staff workflow platform connecting interfaces, business rules, APIs and operational data.</p><div class="chips"><b>REACT</b><b>CLOUDFLARE WORKERS</b><b>REST API</b><b>GOOGLE SHEETS</b></div></div><div class="architecture"><span>STAFF UI</span><i></i><span>REACT</span><i></i><span>API</span><i></i><span>WORKER</span><i></i><span>DATA</span><div class="packet"></div></div></div>
+    </article>
+    <article class="syscard glass" data-cursor="OPEN">
+      <div class="sysno">PROJECT / 002</div><div class="sysgrid"><div><small>DATA AUTOMATION</small><h3>OPERATIONS<br>DATA ENGINE</h3><p>Multi-workbook processing for stock, schedules, overtime and branch reporting—designed to remove repeated manual handling.</p><div class="chips"><b>PYTHON</b><b>EXCEL</b><b>GOOGLE SHEETS</b><b>VALIDATION</b></div></div><div class="chaos"><div>EMPTY</div><div>#VALUE!</div><div>P385</div><div>DUPLICATE</div><div>2520</div><strong>VALIDATE</strong><span>DECISION READY ✓</span></div></div>
+    </article>
+    <article id="lab" class="syscard glass" data-cursor="SCAN">
+      <div class="sysno">PROJECT / 003</div><div class="sysgrid"><div><small>DOCUMENT INTELLIGENCE / R&D</small><h3>DELIVERY NOTE<br>VISION</h3><p>OCR and computer-vision experiments for extracting SKU, English product names, quantities and UOM from photographed delivery notes.</p><div class="chips"><b>OCR</b><b>VISION</b><b>JAVASCRIPT</b><b>WEBGPU</b></div></div><div class="ocr"><div class="paper"><span>[P001] PRODUCT NAME</span><span>12.00 PCS</span><span>[P042] ANOTHER ITEM</span><span>6.00 BOTTLE</span></div><i></i><div class="json">{ sku: "P001", qty: 12, uom: "PCS" }</div></div></div>
+    </article>
+    <article class="syscard glass" data-cursor="OPEN">
+      <div class="sysno">PROJECT / 004</div><div class="sysgrid"><div><small>WORKFORCE ANALYTICS</small><h3>SCHEDULE<br>INTELLIGENCE</h3><p>Parses straight and broken shifts, classifies shift types, calculates overtime and creates branch-level workforce analysis.</p><div class="chips"><b>PYTHON</b><b>PARSING</b><b>BUSINESS RULES</b><b>EXCEL</b></div></div><div class="timeline-mini"><span>05:00 <b>OPENING</b></span><span>12:00 <b>MID</b></span><span>17:00 <b>CLOSING</b></span><span>23:00 <b>NIGHT</b></span></div></div>
+    </article>
+  </div>
+</section>
 
+<section class="transform scene">
+  <div class="chapter">04 <span>BEFORE / AFTER</span></div>
+  <h2>FROM MANUAL NOISE<br>TO <em>CONTROLLED FLOW.</em></h2>
+  <div class="compare glass" id="compare"><div class="before"><h3>BEFORE</h3><div class="mess"><span>SPREADSHEET</span><span>COPY</span><span>PASTE</span><span>ERROR</span><span>MANUAL ENTRY</span><span>DUPLICATE</span></div></div><div class="after"><h3>AFTER</h3><div class="cleanflow"><span>INPUT</span><i>→</i><span>VALIDATE</span><i>→</i><span>PROCESS</span><i>→</i><span>REPORT</span></div></div><div class="handle">↔</div></div>
+</section>
 
-    <section class="section showcase">
-      <div class="section-tag reveal">02.5 / BUILDING EXPERIENCE</div>
-      <div class="section-title reveal"><h2>Scroll less.<br/><span>Explore more.</span></h2><p>A moving view of the systems, thinking and capabilities behind my work.</p></div>
-      <div class="carousel-shell reveal">
-        <button class="carousel-btn prev" aria-label="Previous">←</button>
-        <div class="carousel-track" id="carouselTrack">
-          <article class="slide"><div class="slide-no">01</div><small>AUTOMATION</small><h3>Repetitive → Automatic</h3><p>I look for work people repeat every day and turn the rules behind it into reliable software.</p><div class="visual rings"><i></i><i></i><i></i><b>FLOW</b></div></article>
-          <article class="slide"><div class="slide-no">02</div><small>DATA</small><h3>Raw → Decision-ready</h3><p>Messy spreadsheets, branch files and operational records become structured reporting layers.</p><div class="visual bars"><i></i><i></i><i></i><i></i><i></i></div></article>
-          <article class="slide"><div class="slide-no">03</div><small>SYSTEMS</small><h3>Idea → Interface → API</h3><p>I connect the visible workflow to the logic and data underneath instead of stopping at a mockup.</p><div class="visual nodes"><i></i><i></i><i></i><i></i><b></b></div></article>
-          <article class="slide"><div class="slide-no">04</div><small>INTELLIGENCE</small><h3>Document → Structured Data</h3><p>OCR and vision experiments designed around actual operational documents and extraction rules.</p><div class="visual scanner"><i></i><b>[SKU] PRODUCT</b><b>12 PCS</b></div></article>
-          <article class="slide"><div class="slide-no">05</div><small>ITERATION</small><h3>Edge case → Better product</h3><p>Real usage exposes what diagrams cannot. I use those failures to make the system stronger.</p><div class="visual pulse"><i></i><b>99.9</b><span>IMPROVE / REPEAT</span></div></article>
-        </div>
-        <button class="carousel-btn next" aria-label="Next">→</button>
-      </div>
-      <div class="carousel-dots" id="carouselDots"></div>
-    </section>
+<section id="universe" class="universe scene">
+  <div class="chapter">05 <span>TECH UNIVERSE</span></div>
+  <div class="universe-head"><h2>TOOLS AREN'T<br>THE IDENTITY.<br><em>SHIPPING IS.</em></h2><p>Hover a node. Related technologies react around the core.</p></div>
+  <div class="constellation" id="constellation">
+    <svg viewBox="0 0 800 600"><g stroke="currentColor"><line x1="400" y1="300" x2="140" y2="120"/><line x1="400" y1="300" x2="660" y2="110"/><line x1="400" y1="300" x2="720" y2="330"/><line x1="400" y1="300" x2="600" y2="520"/><line x1="400" y1="300" x2="210" y2="510"/><line x1="400" y1="300" x2="80" y2="320"/></g></svg>
+    <button class="node core-node">YASH<br><small>SYSTEMS</small></button><button class="node n1">PYTHON</button><button class="node n2">REACT</button><button class="node n3">CLOUDFLARE</button><button class="node n4">APIs</button><button class="node n5">OCR / VISION</button><button class="node n6">APPS SCRIPT</button>
+  </div>
+  <div class="marquee"><div>PYTHON ✦ JAVASCRIPT ✦ REACT ✦ CLOUDFLARE ✦ REST APIs ✦ GOOGLE APPS SCRIPT ✦ EXCEL ✦ GOOGLE SHEETS ✦ OCR ✦ COMPUTER VISION ✦ GIT ✦ WEBGPU ✦ DATA ANALYSIS ✦ </div></div>
+</section>
 
-    <section id="work" class="section work">
-      <div class="section-tag reveal">03 / SELECTED SYSTEMS</div>
-      <div class="section-title reveal"><h2>Problems I've turned<br/>into <span>systems.</span></h2><p>Real operational challenges, approached as engineering problems.</p></div>
+<section id="journey" class="journey scene">
+  <div class="chapter">06 <span>EVOLUTION</span></div>
+  <h2>THE PATH<br><em>KEEPS BUILDING.</em></h2>
+  <div class="road">
+    <div><b>01</b><span>FOUNDATION</span><h3>MCA</h3><p>Computer applications and technical foundation.</p></div>
+    <div><b>02</b><span>OPERATIONS</span><h3>HELP DESK</h3><p>Years of frontline problem solving and operational support.</p></div>
+    <div><b>03</b><span>BUSINESS</span><h3>BUSINESS DEVELOPMENT</h3><p>Understanding people, needs and practical business outcomes.</p></div>
+    <div class="active"><b>04</b><span>NOW / JEDDAH</span><h3>DATA PROGRAMMER</h3><p>Automation, data systems and operational technology.</p></div>
+    <div class="future"><b>05</b><span>NEXT</span><h3>?</h3><p>More ambitious systems. Bigger problems.</p></div>
+  </div>
+</section>
 
-      <article class="project project-feature reveal">
-        <div class="project-info">
-          <div class="project-kicker"><span>01</span> OPERATIONS PLATFORM</div>
-          <h3>DAM Operations</h3>
-          <p>A multi-branch web platform designed to move operational workflows away from fragmented manual processes into one controlled digital system.</p>
-          <div class="project-points"><span>30-branch architecture</span><span>Inventory workflows</span><span>Submission validation</span><span>Local draft recovery</span><span>API-backed data</span><span>Staff-first UX</span></div>
-          <div class="tech">REACT <i>•</i> CLOUDFLARE WORKERS <i>•</i> GOOGLE SHEETS <i>•</i> REST API</div>
-        </div>
-        <div class="mock">
-          <div class="mock-top"><span></span><span></span><span></span><b>DAM / OPERATIONS</b></div>
-          <div class="mock-body">
-            <div class="mock-side"><b>⌘</b><i></i><i></i><i></i><i></i></div>
-            <div class="mock-content">
-              <div class="mini-title"><span>Operations Overview</span><em>LIVE</em></div>
-              <div class="metrics"><div><small>BRANCHES</small><strong>30</strong><i>ACTIVE</i></div><div><small>SYSTEM</small><strong>API</strong><i>CONNECTED</i></div><div><small>FLOW</small><strong>LIVE</strong><i>VALIDATED</i></div></div>
-              <div class="chart"><span style="height:35%"></span><span style="height:48%"></span><span style="height:42%"></span><span style="height:68%"></span><span style="height:59%"></span><span style="height:82%"></span><span style="height:74%"></span><span style="height:94%"></span></div>
-              <div class="rows"><i></i><i></i><i></i></div>
-            </div>
-          </div>
-        </div>
-      </article>
+<section class="final scene" id="contact">
+  <div class="finalcode">END OF DEMO.</div>
+  <h2>YOU'VE SEEN<br>WHAT I BUILD.</h2>
+  <h3>NOW GIVE ME A <em>PROBLEM.</em></h3>
+  <p>Interested in data, automation, internal platforms, operational technology and systems that solve real problems.</p>
+  <a href="mailto:YOUR_EMAIL_HERE" class="primary magnetic">INITIALIZE CONVERSATION ↗</a>
+  <div class="social"><a href="YOUR_LINKEDIN_URL" target="_blank">LINKEDIN ↗</a><a href="YOUR_GITHUB_URL" target="_blank">GITHUB ↗</a></div>
+  <small>Replace YOUR_EMAIL_HERE, YOUR_LINKEDIN_URL and YOUR_GITHUB_URL before launch.</small>
+</section>
+</main>
 
-      <div class="project-grid">
-        <article class="project reveal"><div class="project-kicker"><span>02</span> DATA AUTOMATION</div><h3>Operations Data Engine</h3><p>Multi-workbook processing for stock, schedules, overtime and branch-level reporting—built to replace repeated manual handling.</p><div class="flow"><b>FILES</b><i>→</i><b>VALIDATE</b><i>→</i><b>PROCESS</b><i>→</i><b>REPORT</b></div><div class="tech">PYTHON • EXCEL • GOOGLE SHEETS</div></article>
-        <article class="project reveal"><div class="project-kicker"><span>03</span> DOCUMENT INTELLIGENCE</div><h3>Delivery Note Scanner</h3><p>An R&D workflow for converting photographed delivery-note tables into structured operational records using table-aware extraction rules.</p><div class="scan-demo"><div class="paper"><span>[P001] Product Name</span><span>12.00 PCS</span><span>[P042] Another Item</span><span>6.00 BOTTLE</span></div><div class="scan-line"></div></div><div class="tech">OCR • COMPUTER VISION • JAVASCRIPT • WEBGPU</div></article>
-        <article class="project reveal"><div class="project-kicker"><span>04</span> WORKFORCE ANALYTICS</div><h3>Schedule Intelligence</h3><p>Parses complex straight and broken shifts, classifies shift types, calculates overtime and produces branch-level workforce analysis.</p><div class="schedule-demo"><span>OPENING <b>05:00</b></span><span>MID <b>12:00</b></span><span>CLOSING <b>23:00</b></span></div><div class="tech">PYTHON • PARSING • BUSINESS RULES • EXCEL</div></article>
-        <article class="project reveal"><div class="project-kicker"><span>05</span> WORKSPACE AUTOMATION</div><h3>Google Operations Toolkit</h3><p>Reusable scripts for validation, protected formulas, multi-sheet updates, dynamic row operations and operational data controls.</p><div class="code-mini"><code>for (const branch of branches) {<br/>&nbsp;&nbsp;validate();<br/>&nbsp;&nbsp;transform();<br/>&nbsp;&nbsp;sync();<br/>}</code></div><div class="tech">APPS SCRIPT • SHEETS • AUTOMATION</div></article>
-      </div>
-    </section>
+<div class="dock glass"><a href="#profile">PROFILE</a><a href="#systems">SYSTEMS</a><a href="#lab">LAB</a><a href="#universe">STACK</a><a href="#journey">JOURNEY</a><button id="terminalBtn">&gt;_</button></div>
 
-    <section id="stack" class="section stack">
-      <div class="section-tag reveal">04 / TECHNICAL STACK</div>
-      <div class="section-title reveal"><h2>Tools are not the identity.<br/><span>Shipping is.</span></h2><p>I choose technology around the problem, not the other way around.</p></div>
-      <div class="marquee"><div>PYTHON ✦ JAVASCRIPT ✦ REACT ✦ CLOUDFLARE ✦ GOOGLE APPS SCRIPT ✦ REST APIs ✦ EXCEL ✦ GOOGLE SHEETS ✦ OCR ✦ COMPUTER VISION ✦ GIT ✦ WEBGPU ✦ DATA ANALYSIS ✦ </div></div>
-      <div class="stack-grid reveal">
-        <div><small>PROGRAMMING</small><p>Python<br/>JavaScript<br/>Google Apps Script</p></div>
-        <div><small>WEB & SYSTEMS</small><p>React<br/>REST APIs<br/>Cloudflare Workers</p></div>
-        <div><small>DATA</small><p>Excel Processing<br/>Google Sheets<br/>Data Validation & ETL</p></div>
-        <div><small>EXPERIMENTAL</small><p>OCR<br/>Computer Vision<br/>WebGPU / Vision Models</p></div>
-        <div><small>WORKFLOW</small><p>Git & GitHub<br/>VS Code<br/>AI-assisted Development</p></div>
-      </div>
-    </section>
+<div class="palette" id="palette"><div class="palettebox glass"><div class="pal-input"><span>⌘</span><input id="palInput" placeholder="Type a command..."></div><div class="commands"><button data-go="#profile">whoami <span>Profile</span></button><button data-go="#systems">projects <span>Systems I've built</span></button><button data-go="#universe">skills <span>Technical universe</span></button><button data-go="#journey">experience <span>Career journey</span></button><button data-go="#contact">contact <span>Start a conversation</span></button></div><small>ESC TO CLOSE</small></div></div>
 
-    <section class="section philosophy">
-      <div class="big-quote reveal">“I like problems where the answer isn't another spreadsheet—<span>it's a better system.</span>”</div>
-      <div class="principles reveal"><div><b>01</b><span>UNDERSTAND</span><p>Find the actual operational bottleneck.</p></div><div><b>02</b><span>DESIGN</span><p>Make the workflow simpler before coding it.</p></div><div><b>03</b><span>BUILD</span><p>Turn rules and data into a working product.</p></div><div><b>04</b><span>ITERATE</span><p>Improve from real-world usage and edge cases.</p></div></div>
-    </section>
-
-
-    <section class="kinetic">
-      <div class="kinetic-line left">DATA • SYSTEMS • AUTOMATION • INTELLIGENCE • DATA • SYSTEMS • AUTOMATION • INTELLIGENCE •</div>
-      <div class="kinetic-line right">BUILD • TEST • IMPROVE • SHIP • BUILD • TEST • IMPROVE • SHIP • BUILD • TEST •</div>
-    </section>
-
-    <section id="contact" class="contact">
-      <div class="contact-inner reveal">
-        <div class="section-tag">05 / LET'S BUILD</div>
-        <h2>Have a messy process?<br/><span>That's where I start.</span></h2>
-        <p>I'm interested in teams working on data, automation, internal platforms, operational technology and systems that solve real business problems.</p>
-        <a class="btn primary big" href="mailto:YOUR_EMAIL_HERE">Start a conversation <span>↗</span></a>
-        <p class="edit-note">Replace <b>YOUR_EMAIL_HERE</b> in index.html with your email before launch.</p>
-      </div>
-      <footer><div class="brand"><span>YL</span> YASHWANTH.L</div><p>Data Programmer · Automation Developer · Jeddah, Saudi Arabia</p><p>© 2026 Yashwanth.L</p></footer>
-    </section>
-  </main>
-  <script src="script.js"></script>
-</body>
-</html>
+<div class="terminal-modal" id="terminal"><div class="term glass"><div class="termhead"><b>YASH//TERMINAL</b><button id="termClose">×</button></div><div id="termOut"><p>YASH//OS v1.0</p><p>Type <b>help</b> to explore.</p></div><div class="termin"><span>$</span><input id="termInput" autocomplete="off" spellcheck="false"></div></div></div>
+<script src="script.js"></script>
+</body></html>
