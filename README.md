@@ -1,22 +1,18 @@
-# Yashwanth.L V10 — Energy Handoff
+# Yashwanth.L V11 — Mobile Fixed
 
-This version starts from the stable V8 Safari-safe portfolio and keeps the V8.1 long-name alignment fix.
+Full V10 portfolio with a dedicated mobile responsive repair.
 
-V9's full-page animated wire has been completely removed.
+- horizontal overflow fixed
+- hero/name scales safely
+- monolith centered and reduced on mobile
+- parallax disabled on mobile
+- side tech labels hidden on phones
+- responsive About / Skills / Contact
+- 2-column phone tech grid
+- project 3D transform neutralized on phones
+- timeline and terminal constrained
+- buttons wrap
+- Energy Handoff retained in a lighter phone form
+- desktop + Safari fixes retained
 
-New lightweight section connection:
-- IntersectionObserver activates each section only once.
-- Tiny white/burgundy energy handoff between sections.
-- Section heading receives a short light sweep.
-- Tech cards wake in a quick stagger.
-- Existing experience timeline receives a glow rather than adding another wire.
-- Terminal gets one power-on pulse.
-- Contact receives a final completion pulse.
-- No continuous scroll listener.
-- No full-page SVG.
-- No requestAnimationFrame scroll animation.
-- Safari/mobile/reduced-motion handling included.
-
-Cloudflare Pages:
-Build command: npm run build
-Output directory: dist
+Cloudflare Pages: `npm run build` → `dist`

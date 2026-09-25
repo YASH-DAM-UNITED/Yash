@@ -348,3 +348,63 @@ main section.energyActive .techCard{
     transition:none!important;
   }
 }
+
+/* V11 — MOBILE HARDENING */
+html,body,#root{max-width:100%;overflow-x:hidden}
+*{box-sizing:border-box}
+img,svg,video,canvas{max-width:100%}
+
+@media(max-width:950px){
+.hero{min-height:auto!important;height:auto!important;padding:108px 22px 68px!important;overflow:hidden!important}
+.heroInner,.heroGrid,.heroContent{width:100%!important;max-width:100%!important;display:flex!important;flex-direction:column!important;grid-template-columns:1fr!important;gap:30px!important}
+.heroCopy{width:100%!important;max-width:100%!important;min-width:0!important;padding-right:0!important;z-index:15!important}
+.hero h1{width:100%!important;max-width:100%!important;white-space:normal!important;overflow:visible!important;font-size:clamp(48px,11vw,76px)!important;line-height:.92!important;letter-spacing:-3px!important}
+.visualSide{width:100%!important;max-width:100%!important;min-width:0!important;height:490px!important;display:flex!important;align-items:center!important;justify-content:center!important;overflow:visible!important}
+.monolithAnchor{position:relative!important;left:auto!important;right:auto!important;top:auto!important;margin:0 auto!important;transform:scale(.74)!important;-webkit-transform:scale(.74)!important;transform-origin:center!important;-webkit-transform-origin:center!important;flex:none!important}
+.monolithParallax{transform:none!important;-webkit-transform:none!important}
+.section{width:100%!important;max-width:100%!important;min-height:auto!important;padding:76px 22px!important;overflow:hidden!important}
+.container,.sectionInner,.aboutGrid,.skillsGrid,.projectsGrid,.contactGrid{width:100%!important;max-width:100%!important;min-width:0!important}
+.aboutGrid,.skillsGrid,.contactGrid{display:grid!important;grid-template-columns:1fr!important;gap:30px!important}
+.aboutIntro{max-width:100%!important}
+.focusGrid{grid-template-columns:1fr 1fr!important;gap:10px!important}
+.techGrid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:10px!important}
+.techCard,.techBadge{min-width:0!important;max-width:100%!important}
+.projectStage,.carousel,.projectCarousel{width:100%!important;max-width:100%!important;perspective:none!important}
+.projectCard{max-width:100%!important;min-width:0!important}
+.timeline{width:100%!important;max-width:100%!important;margin-left:0!important;padding-left:24px!important}
+.terminalBox,.terminalWindow{width:100%!important;max-width:100%!important;overflow:hidden!important}
+.terminalBox pre,.terminalWindow pre{white-space:pre-wrap!important;overflow-wrap:anywhere!important}
+}
+
+@media(max-width:600px){
+nav,.nav{max-width:calc(100% - 24px)!important;width:calc(100% - 24px)!important;left:12px!important;right:12px!important}
+.navLinks{display:none!important}
+.hero{padding:96px 16px 48px!important}
+.hero h1{font-size:clamp(40px,11.5vw,58px)!important;line-height:.92!important;letter-spacing:-2.2px!important}
+.hero p,.heroSub,.heroDescription{max-width:100%!important}
+.visualSide{height:390px!important;margin-top:-10px!important}
+.monolithAnchor{transform:scale(.58)!important;-webkit-transform:scale(.58)!important}
+.rightTech,.leftTech{display:none!important}
+.section{padding:62px 16px!important}
+.section h2{font-size:clamp(30px,8.8vw,42px)!important;line-height:1!important}
+.aboutStatement{font-size:clamp(25px,7.8vw,33px)!important;line-height:1.06!important}
+.focusGrid{grid-template-columns:1fr!important}
+.techGrid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important}
+.techCard,.techBadge{padding:11px 8px!important;font-size:10px!important}
+.projectCard{transform:none!important;width:100%!important;margin:0!important}
+.projectControls,.carouselControls{width:100%!important;justify-content:center!important}
+.timeline{padding-left:18px!important}
+.timelineItem,.experienceCard{margin-left:0!important;width:100%!important;max-width:100%!important}
+.terminalBox,.terminalWindow{border-radius:14px!important;font-size:11px!important}
+.contactActions,.heroActions{display:flex!important;flex-wrap:wrap!important;gap:10px!important}
+.contactActions a,.heroActions a,.btn{max-width:100%!important}
+main section:not(:first-child)::before{height:34px!important;top:-17px!important;width:3px!important}
+main section.energyActive .sectionHead::after{width:28px!important}
+}
+
+@media(max-width:390px){
+.hero h1{font-size:39px!important;letter-spacing:-1.8px!important}
+.visualSide{height:350px!important}
+.monolithAnchor{transform:scale(.51)!important;-webkit-transform:scale(.51)!important}
+.section{padding-left:14px!important;padding-right:14px!important}
+}
