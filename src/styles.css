@@ -212,98 +212,139 @@
 }
 
 /* =========================================================
-   V9 — CONTINUOUS SCROLL JOURNEY WIRE
-   One luminous cable connects the complete portfolio.
+   V10 — LIGHTWEIGHT ENERGY HANDOFF
+   IntersectionObserver only. No full-page SVG or scroll loop.
    ========================================================= */
-.journeyWire{
+main section{
+  position:relative;
+  isolation:isolate;
+}
+/* Small energy receiver between sections */
+main section:not(:first-child)::before{
+  content:"";
   position:absolute;
-  left:0;
-  top:0;
-  width:100%;
-  height:100%;
-  min-height:7000px;
-  z-index:1;
+  z-index:8;
+  top:-44px;
+  left:50%;
+  width:5px;
+  height:88px;
+  border-radius:99px;
+  background:linear-gradient(to bottom,transparent,#fff 45%,#ff315f 52%,transparent);
+  box-shadow:0 0 8px #fff,0 0 16px #ff315f88;
+  opacity:0;
+  transform:translate3d(-50%,-18px,0) scaleY(.35);
+  transform-origin:top;
+  transition:opacity .45s ease,transform .75s cubic-bezier(.2,.75,.2,1);
   pointer-events:none;
-  overflow:hidden;
-  opacity:.92;
 }
-.journeyWire svg{
+main section.energyActive:not(:first-child)::before{
+  opacity:.72;
+  transform:translate3d(-50%,0,0) scaleY(1);
+}
+/* Energy arrival pulse */
+main section:not(:first-child)::after{
+  content:"";
   position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  overflow:visible;
+  z-index:7;
+  top:-5px;
+  left:50%;
+  width:8px;
+  height:8px;
+  border:1px solid rgba(255,255,255,.9);
+  border-radius:50%;
+  opacity:0;
+  transform:translate(-50%,-50%) scale(.2);
+  pointer-events:none;
 }
-.wireShadow,.wireGlowPath,.wireMain{
-  fill:none;
-  vector-effect:non-scaling-stroke;
-  stroke-linecap:round;
-  stroke-linejoin:round;
+main section.energyActive:not(:first-child)::after{
+  animation:handoffRing 1.15s .28s ease-out 1 both;
 }
-.wireShadow{
-  stroke:#16090e;
-  stroke-width:7;
+@keyframes handoffRing{
+  0%{opacity:0;transform:translate(-50%,-50%) scale(.2);box-shadow:0 0 0 #ff315f}
+  28%{opacity:.9}
+  100%{opacity:0;transform:translate(-50%,-50%) scale(8);box-shadow:0 0 18px #ff315f}
+}
+/* Section heading receives the energy */
+main section .sectionHead{
+  position:relative;
+}
+main section .sectionHead::after{
+  content:"";
+  display:inline-block;
+  vertical-align:middle;
+  width:0;
+  height:1px;
+  margin-left:12px;
+  background:linear-gradient(90deg,#fff,#ff315f,transparent);
+  box-shadow:0 0 6px rgba(255,255,255,.55);
+  opacity:0;
+  transition:width .8s .18s cubic-bezier(.2,.75,.2,1),opacity .3s .18s;
+}
+main section.energyActive .sectionHead::after{
+  width:clamp(45px,8vw,110px);
   opacity:.72;
 }
-.wireGlowPath{
-  stroke:#ff5478;
-  stroke-width:5;
-  opacity:.20;
-  filter:url(#wireGlow);
+/* Cards/content get one restrained illumination, not permanent animation */
+main section.energyActive .glass,
+main section.energyActive .projectCard,
+main section.energyActive .focusCard,
+main section.energyActive .techCard{
+  animation:energyReveal 1s ease-out 1;
 }
-.wireMain{
-  stroke:#f8f6f7;
-  stroke-width:1.35;
-  opacity:.78;
-  filter:drop-shadow(0 0 3px #fff) drop-shadow(0 0 8px #ff315f88);
+@keyframes energyReveal{
+  0%{filter:brightness(.86);box-shadow:0 0 0 rgba(255,49,95,0)}
+  42%{filter:brightness(1.08);box-shadow:0 0 22px rgba(255,49,95,.08)}
+  100%{filter:brightness(1);box-shadow:inherit}
 }
-.wirePulseHalo{
-  opacity:0;
-  filter:drop-shadow(0 0 8px #fff) drop-shadow(0 0 18px #ff315f);
-  transition:opacity .2s linear;
+/* Tech section: cards wake in a quick sequence */
+.skills.energyActive .techGrid>*{animation:techWake .55s ease-out both}
+.skills.energyActive .techGrid>*:nth-child(2n){animation-delay:.06s}
+.skills.energyActive .techGrid>*:nth-child(3n){animation-delay:.12s}
+.skills.energyActive .techGrid>*:nth-child(4n){animation-delay:.18s}
+@keyframes techWake{
+  from{opacity:.45;transform:translate3d(0,8px,0);filter:brightness(.75)}
+  to{opacity:1;transform:translate3d(0,0,0);filter:brightness(1)}
 }
-.wireNode{
-  fill:#fff;
-  stroke:#ff315f;
-  stroke-width:3;
-  vector-effect:non-scaling-stroke;
-  filter:drop-shadow(0 0 5px #fff) drop-shadow(0 0 11px #ff315f);
-  animation:wireNodePulse 2.8s ease-in-out infinite;
+/* Existing timeline becomes the connector in Experience */
+.experience.energyActive .timeline::before{
+  box-shadow:0 0 7px rgba(255,255,255,.35),0 0 14px rgba(255,49,95,.22);
+  transition:box-shadow .7s ease;
 }
-@keyframes wireNodePulse{
-  50%{r:11;opacity:.65}
+/* Terminal gets a single powered-on pulse */
+.terminal.energyActive .terminalBox,
+.terminalSection.energyActive .terminalBox{
+  animation:terminalPower 1s ease-out 1;
 }
-/* Sections sit above the cable, while transparent gaps reveal it. */
-main{position:relative;z-index:2}
-.section{background:
-  radial-gradient(circle at 80% 45%,#280711e8 0,transparent 35%),
-  linear-gradient(#050103f2,#080205f2);
+@keyframes terminalPower{
+  0%{filter:brightness(.75)}
+  35%{filter:brightness(1.18);box-shadow:0 0 30px rgba(255,49,95,.14)}
+  100%{filter:brightness(1)}
 }
-.hero{z-index:2}
-.about .journeyPort,.skills .journeyPort,.projects .journeyPort{position:relative}
-/* subtle cable sockets at major section headings */
-.sectionHead:after{
-  content:"";
-  width:5px;height:5px;border-radius:50%;
-  margin-left:2px;
-  background:#fff;
-  box-shadow:0 0 7px #fff,0 0 15px #ff315f;
-  opacity:.55;
+/* Contact finishes the journey with a restrained final halo */
+.contact.energyActive .contactCore,
+.contact.energyActive .identityCore{
+  animation:finalCorePulse 1.4s ease-out 1;
 }
-@media(max-width:950px){
-  .journeyWire{opacity:.65}
-  .wireMain{stroke-width:1}
-  .wireGlowPath{stroke-width:3}
+@keyframes finalCorePulse{
+  35%{filter:brightness(1.2) drop-shadow(0 0 16px rgba(255,255,255,.28))}
 }
-@media(max-width:560px){
-  .journeyWire{left:0;width:100%;opacity:.48}
-  .journeyWire svg{width:135%;left:-18%}
-  .wireShadow{stroke-width:4}
-  .wireMain{stroke-width:.9}
-  .wireGlowPath{stroke-width:2}
-  .wireNode{display:none}
+/* Safari + mobile: keep effects composited and cheap */
+@supports (-webkit-hyphens:none){
+  main section::before,main section::after{
+    -webkit-transform:translateZ(0);
+    backface-visibility:hidden;
+    -webkit-backface-visibility:hidden;
+  }
+}
+@media(max-width:700px){
+  main section:not(:first-child)::before{height:58px;top:-29px;opacity:.45}
+  main section.energyActive .sectionHead::after{width:48px}
 }
 @media(prefers-reduced-motion:reduce){
-  .wireNode{animation:none!important}
-  .wirePulseHalo{display:none}
+  main section::before,main section::after,
+  main section .sectionHead::after,
+  main section.energyActive *{
+    animation:none!important;
+    transition:none!important;
+  }
 }

@@ -1,19 +1,22 @@
-# Yashwanth.L V9 — Connected Journey
+# Yashwanth.L V10 — Energy Handoff
 
-Full V8 portfolio plus a continuous animated journey wire.
+This version starts from the stable V8 Safari-safe portfolio and keeps the V8.1 long-name alignment fix.
 
-New:
-- One curly white/silver energy cable runs through the complete website.
-- Scroll progressively draws the cable.
-- Bright energy pulse follows scroll position.
-- Soft burgundy glow keeps it integrated with the site theme.
-- Cable curves and loops between sections.
-- Connection nodes mark About, Skills, Projects, Experience, Terminal and Contact.
-- Wire sits behind content/cards.
-- Mobile receives a lighter simplified presentation.
-- Reduced-motion accessibility supported.
-- Safari-safe hero fixes and V8.1 long-name alignment fix retained.
+V9's full-page animated wire has been completely removed.
+
+New lightweight section connection:
+- IntersectionObserver activates each section only once.
+- Tiny white/burgundy energy handoff between sections.
+- Section heading receives a short light sweep.
+- Tech cards wake in a quick stagger.
+- Existing experience timeline receives a glow rather than adding another wire.
+- Terminal gets one power-on pulse.
+- Contact receives a final completion pulse.
+- No continuous scroll listener.
+- No full-page SVG.
+- No requestAnimationFrame scroll animation.
+- Safari/mobile/reduced-motion handling included.
 
 Cloudflare Pages:
 Build command: npm run build
-Output: dist
+Output directory: dist
